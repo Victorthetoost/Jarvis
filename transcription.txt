@@ -1,13 +1,4 @@
-Okay, so now we have zero overlap, so that means I'll probably be cutting off a lot of each sentence. So, both threads start recording at nearly...
-time, the duration and overlap logic is not correct, staggering the recordings. Threads are not properly synchronized so they capture the same audio.
-so their audio does not overlap and I also have to check the loop logic and that will hopefully make it better
-Let's see if that did anything.
-Okay, so I added an extra thread, so let's see how that works. I didn't add a duration minus overlap after that, so...
-I could be screwing myself over, I don't know yet, we will see.
 
-So that kinda sucks. So that kinda sucks.
-it doesn't work, if it clones, if it doesn't clone, yeah, I don't know how it will work, if it will work at all.
-Also, double check that your microphone is not picking up the same audio from both threads, for example if you're speaking continuously.
 [2025-07-18 00:17:46.759408][Thread-1] Alright, yeah, you pretty much just, yeah, yeah, you're just cooked. If you die and they lose your body, you're just kinda cooked. You gotta like, um, oh and if you, kick the fatty friend two player around me, oh my god, I'm gonna play that, I'm definitely gonna play that with you. Wait, Donovan, do you want to, Loki? Loki, do you want to play kick the fatty friend? Bye bye, see ya, see ya. I'll miss you. Bye.
 [2025-07-18 00:17:54.918091][Thread-2] Yeah, oh really oh really yeah, yeah, oh You hate this Kick the fatty hold on hop on hop on hop on hop on hop on come on I know you want to do this. I know you want to do
 [2025-07-18 00:18:00.693510][Thread-1] Come on, come on, I really wanna do this, come on.
