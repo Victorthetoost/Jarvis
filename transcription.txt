@@ -1,1 +1,59 @@
- So change it back to 10 seconds because I really don't want to wait 30 seconds again Apparently I just fucked up the file naming should be good now
+Okay, so now we have zero overlap, so that means I'll probably be cutting off a lot of each sentence. So, both threads start recording at nearly...
+time, the duration and overlap logic is not correct, staggering the recordings. Threads are not properly synchronized so they capture the same audio.
+so their audio does not overlap and I also have to check the loop logic and that will hopefully make it better
+Let's see if that did anything.
+Okay, so I added an extra thread, so let's see how that works. I didn't add a duration minus overlap after that, so...
+I could be screwing myself over, I don't know yet, we will see.
+
+So that kinda sucks. So that kinda sucks.
+it doesn't work, if it clones, if it doesn't clone, yeah, I don't know how it will work, if it will work at all.
+Also, double check that your microphone is not picking up the same audio from both threads, for example if you're speaking continuously.
+[2025-07-18 00:17:46.759408][Thread-1] Alright, yeah, you pretty much just, yeah, yeah, you're just cooked. If you die and they lose your body, you're just kinda cooked. You gotta like, um, oh and if you, kick the fatty friend two player around me, oh my god, I'm gonna play that, I'm definitely gonna play that with you. Wait, Donovan, do you want to, Loki? Loki, do you want to play kick the fatty friend? Bye bye, see ya, see ya. I'll miss you. Bye.
+[2025-07-18 00:17:54.918091][Thread-2] Yeah, oh really oh really yeah, yeah, oh You hate this Kick the fatty hold on hop on hop on hop on hop on hop on come on I know you want to do this. I know you want to do
+[2025-07-18 00:18:00.693510][Thread-1] Come on, come on, I really wanna do this, come on.
+[2025-07-18 00:18:05.515640][Thread-2] Please, please.
+[2025-07-18 00:18:10.791002][Thread-1] I know you wanna do this, come on.
+[2025-07-18 00:18:15.418540][Thread-2] .
+[2025-07-18 00:18:21.192567][Thread-1] What do you mean? I don't want to do this. Come on.
+[2025-07-18 00:18:26.809630][Thread-2] What do you mean man? What do you mean? No please don't leave.
+[2025-07-18 00:18:31.530650][Thread-1] I'm online.
+[2025-07-18 00:18:36.315360][Thread-2] I'm not.
+[2025-07-18 00:18:42.136829][Thread-1] Oh, that's weird. Wait, are you in? I'm online. I'm here.
+[2025-07-18 00:18:47.471678][Thread-2] Can you try joining and then I'll try joining you?
+[2025-07-18 00:18:52.286448][Thread-1] Two player battle tycoon
+[2025-07-18 00:18:57.968870][Thread-2] Alright, here, let me join you.
+[2025-07-18 00:19:04.332417][Thread-1] Come to color red, ooh I'm down dude. I'll come wherever you want me to come.
+[2025-07-18 00:19:09.848468][Thread-2] What is going on? What is going on?
+[2025-07-18 00:19:15.898785][Thread-1] Where are you? Oh I see you in the corner. Can I sprint?
+[2025-07-18 00:19:21.103637][Thread-2] Alright, I'm here bro.
+[2025-07-18 00:19:26.588514][Thread-1] All right, we stand here, zero dollars.
+[2025-07-18 00:19:50.846527][Thread-2] how do I build a conveyor? uh... eee... eee... eee... mine.
+[2025-07-18 00:20:00.711902][Thread-1] all the shit on the greatest legality that's what i am uh... so if i buy a ton of these how much money do i have twenty six dollars function then
+[2025-07-18 00:20:05.986569][Thread-2] upgrades already how much is the first upgrade oh
+[2025-07-18 00:20:14.815549][Thread-1] Okay, I'm chillin'. Yeah, Legodithy, that's what I am. Alright, so if I buy a ton of these... How much money do I have? Twenty-six dollars, fuck yeah. Damn, you got...
+[2025-07-18 00:20:20.692610][Thread-2] What does that one even do anything? Does that dropper even do anything?
+[2025-07-18 00:20:25.849327][Thread-1] I don't see anything happening.
+[2025-07-18 00:20:31.244491][Thread-2] one it drops one extra every like five minutes
+[2025-07-18 00:20:36.101494][Thread-1] I'll drop
+[2025-07-18 00:20:41.817040][Thread-2] Oh, yeah, no, it's worth quite a bit. Yeah
+[2025-07-18 00:20:47.394722][Thread-1] So it's what at 200 and then what this one is
+[2025-07-18 00:20:52.754876][Thread-2] 200 oh yeah perfect you got shit yeah
+[2025-07-18 00:20:58.742942][Thread-1] Dude, building a business is this easy in real life, I'm telling you.
+[2025-07-18 00:21:04.093810][Thread-2] This is what Jeff Bezos did.
+[2025-07-18 00:21:09.404399][Thread-1] mom mom I'm being an entrepreneur man
+[2025-07-18 00:21:14.573492][Thread-2] Are they like fighting or?
+[2025-07-18 00:21:20.468815][Thread-1] going on? Man, I'm just trying to have a peaceful day here.
+[2025-07-18 00:21:26.193018][Thread-2] I choose peace, not violence. Make love, not war.
+[2025-07-18 00:21:31.010376][Thread-1] .
+[2025-07-18 00:21:35.878156][Thread-2] 
+[2025-07-18 00:21:41.213885][Thread-1] Okay, so I can't...
+[2025-07-18 00:21:46.946499][Thread-2] I can't collect your money. This sucks. This game blows.
+[2025-07-18 00:21:52.361483][Thread-1] No, but we're on the same team.
+[2025-07-18 00:21:57.847138][Thread-2] I just had to check it out.
+[2025-07-18 00:22:02.982787][Thread-1] Thank you.
+[2025-07-18 00:22:13.569879][Thread-2] I don't know.
+[2025-07-18 00:22:18.786952][Thread-1] like tomorrow.
+[2025-07-18 00:22:23.979080][Thread-2] 
+[2025-07-18 00:22:29.119601][Thread-1] Green.
+[2025-07-18 00:22:34.960545][Thread-2] Yeah, so you can't auto click, it sucks.
+[2025-07-18 00:23:07.612365][Thread-1] Yeah, you gotta click fast but not too fast, because too fast doesn't matter. Yeah.
