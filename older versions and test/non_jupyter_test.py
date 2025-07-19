@@ -21,7 +21,7 @@ recording_buffer = {
     "Thread-2": None
 }
 
-def is_significant_audio(audio_data, threshold=100):
+def is_significant_audio(audio_data, threshold=150):
     return np.abs(audio_data).mean() > threshold
 
 def record_audio(thread_name):

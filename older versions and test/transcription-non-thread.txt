@@ -1,0 +1,25 @@
+[2025-07-19 01:46:34] Okay, so here is a test using transcription that is non-threaded. Let's see how it will work. Let's try it out.
+[2025-07-19 01:46:45] for a very long time like that, will it pick it up? Will it crash? What will happen? If I... wait half a second and do that, will it...
+[2025-07-19 01:46:55] record what I'm saying or just skip over it, because I think it will skip over it.
+[2025-07-19 01:47:06] crazy is it picking it up if it's picking it up that's very impressive i don't know huh if i could
+[2025-07-19 01:47:16] 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+[2025-07-19 01:47:27] 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 52, 53, 54, 54, 55, 56, 57, 58, 59, 60, 61, 60, 61, 62, 63, 62, 63, 62, 63, 63, 64, 63, 64, 63,
+[2025-07-19 01:47:37] 27 28 29 30
+[2025-07-19 01:47:48] Okay, so it got all of that apparently. I got up to 30 and um, might have crashed.
+[2025-07-19 01:47:58] I think it probably crashed um seems to be saving to a file fine
+[2025-07-19 01:48:09] Seems the recording conversation is fine until it stops.
+[2025-07-19 01:48:19] Oh got to 14 is it just really slow on the process
+[2025-07-19 01:48:29] or
+[2025-07-19 01:48:40] Oh cu
+[2025-07-19 01:48:50] Let's see if it picks up all of it. Okay, so it got to 30. It got to 30 just fine.
+[2025-07-19 01:49:01] Okay, okay, so it's a little bit slow, but it is recording everything.
+[2025-07-19 01:49:11] It doesn't seem to have skipped over any of the numbers. It might have duplicated them, but that's not that big of an issue.
+[2025-07-19 01:49:22] Yeah, okay, so I think it seems to be working pretty well. It's just a little bit slow at times, which is not that big of an issue.
+[2025-07-19 01:49:32] I think it's fine it's just gonna have to like think it's made to make appointments and remind me of stuff which isn't
+[2025-07-19 01:49:43] Time sensitive that makes any sense because like they're in conversation We could be talking and then afterwards it will
+[2025-07-19 01:49:53] and make an appointment for like on calendar and most likely the appointment isn't gonna be five minutes from now so if it's a little behind that's fine
+[2025-07-19 01:50:04] Okay, so I'd say this is a success. We found our running model.
+[2025-07-19 01:50:14] As a new python file. God my chair is so loud. Alright.
+[2025-07-19 01:50:25] Okay so we got our audio transcriber that P...
+[2025-07-19 01:50:35] Function testing. Alright cool. Let me uh, control C. To stop it. How do I stop it?
+[2025-07-19 01:50:46] tightly
