@@ -1,0 +1,91 @@
+[2025-07-18 20:45:47.663074][Thread-1] Alright, so I think it should work now because it is kind of breaking before on Jupiter and I think that's because the Jupiter notebook can't handle it. I know the writing across the switch works perfectly now. I just got to make sure that it doesn't crash. It also has this weird thing where it's writing to it.
+[2025-07-18 20:45:54.945139][Thread-2] Well, it just randomly starts saying, Thanks for watching, thanks for watching you, thanks for watching you, you, thanks for watching, and then it's just blank, and that's kinda freaky me.
+[2025-07-18 20:46:00.006340][Thread-1] But, I think, uh...
+[2025-07-18 20:46:06.413419][Thread-2] you're just hallucinating uh something so hopefully you thanks for watching you you thanks for watching and then it's just blank and that's kind of freaky me
+[2025-07-18 20:46:10.983354][Thread-1] should be good.
+[2025-07-18 20:46:18.025881][Thread-2] Yeah I think uh... Okay so I think it works. Hopefully you... Thanks for watching you, you, thanks for watching and then it's just blank and that's kinda freaking me out.
+[2025-07-18 20:46:23.383780][Thread-1] on a normal thing not jupiter notebook but like the normal python python
+[2025-07-18 20:46:27.855131][Thread-2] I think.
+[2025-07-18 20:46:32.442229][Thread-1] Got really lucky.
+[2025-07-18 20:46:37.377523][Thread-2] Thanks for watching. Thanks for watching.
+[2025-07-18 20:46:41.953954][Thread-1] Thanks for watching!
+[2025-07-18 20:46:46.520322][Thread-2] Thanks for watching.
+[2025-07-18 20:46:51.109881][Thread-1] Thanks for watching!
+[2025-07-18 20:46:55.991830][Thread-2] Thanks for watching. Thanks for watching.
+[2025-07-18 20:47:00.616892][Thread-1] Thanks for watching!
+[2025-07-18 20:47:08.131831][Thread-2] Alright, let's see. Oh yeah, when it's silent... Thanks for watching. You, you, thanks for watching. And then it's just blank. And that's kinda freaking me out.
+[2025-07-18 20:47:12.699204][Thread-1] Thanks for watching.
+[2025-07-18 20:47:19.575733][Thread-2] Thanks for watching and then it would just be silent. So I think thanks for watching you, you, thanks for watching and then it's just blank and that's kind of freaking me out.
+[2025-07-18 20:47:25.395757][Thread-1] I think that's why... oh nevermind it just says thanks for watching randomly. Okay that's a little concerned.
+[2025-07-18 20:47:31.880491][Thread-2] Um, that's quite concerning, but thanks for watching, you, you, thanks for watching, and then it's just blank, and that's kinda freaking me out.
+[2025-07-18 20:47:37.357406][Thread-1] I think it should be fine, hopefully. Yeah, I think it should be good.
+[2025-07-18 20:47:44.729947][Thread-2] Um, I just gotta keep talking. And while I'm talking, it will be okay. Time's up. Thanks for watching. You, you, thanks for watching. And then it's just blank. And that's kinda freaky me.
+[2025-07-18 20:47:50.428726][Thread-1] looks like they're working thread one, thread two seem to be working as well, it alternates
+[2025-07-18 20:47:56.804147][Thread-2] So I might... Thanks for watching, you, you, thanks for watching, and then it's just blank, and that's kind of freaking me out.
+[2025-07-18 20:48:01.525557][Thread-1] Just delete it.
+[2025-07-18 20:48:08.278075][Thread-2] Yeah. Thanks for watching. You, you, thanks for watching. And then it's just blank. And that's kind of freaking me out.
+[2025-07-18 20:48:13.815785][Thread-1] Oh wow, it just does thanks for watching anytime and uh... Alright, that's it.
+[2025-07-18 20:48:20.834216][Thread-2] I could just um... I could just delete it... Thanks for watching, you, you, thanks for watching, and then it's just blank, and that's kinda freaky me.
+[2025-07-18 20:48:26.168646][Thread-1] Or... I could just delete the thanks for watching. Oh, that's...
+[2025-07-18 20:48:32.940684][Thread-2] weird though i wonder why it does that i wonder why it does thanks for watching but thanks for watching you you thanks for watching and then it's just blank and that's kind of freaking me
+[2025-07-18 20:48:37.869518][Thread-1] so fucking much uh...
+[2025-07-18 20:48:44.753088][Thread-2] That's weird. Thanks for watching. You, you, thanks for watching. And then it's just blank. And that's kind of freaking me out.
+[2025-07-18 20:48:50.424835][Thread-1] Yeah, okay, I'm just gonna wait for it to stop. How much longer does it got?
+[2025-07-18 20:48:56.872109][Thread-2] Um... Five minutes, that's quite a lot. Thanks for watching you you thanks for watching and then it's just blank and that's kind of freaky me
+[2025-07-18 20:49:26.261659][Thread-1] Alright, I'm gonna do CTRL-T. And stop it. Alright.
+[2025-07-18 20:56:25.562408][Thread-1] ...
+-------------------------------------------------
+[2025-07-18 20:56:56.175149][Thread-2] ...
+[2025-07-18 20:56:56.225884][Thread-1] ...
+[2025-07-18 20:57:26.652401][Thread-2] ...
+[2025-07-18 20:57:26.685209][Thread-1] ...
+--------------------------------------------\
+
+[2025-07-18 21:01:28.860311][Thread-1] There we go recording all right, so it hasn't crashed yet, which is a good sign Thread name no voice detected skipping Transcription so hopefully detects my voice. Oh, I forgot to go to transcription dot py So that way when it starts writing it's not gonna Be weird hopefully any second now texture start appearing and
+[2025-07-18 21:03:19.700980][Thread-1] okay so it should be working a lot better now yeah I'm not gonna touch it at all because I think that might have crashed it before so I'm not gonna touch the the transcription you are that txt file at all I think it should be a lot better hopefully um it is say it is a lot slower because the other one used to go like line by line anytime
+[2025-07-18 21:03:25.594548][Thread-2] pause it does a new line but in this case I don't know I don't know if it's gonna do that
+[2025-07-18 21:03:30.792863][Thread-1] Okay, so the first one worked great. Let's see if...
+[2025-07-18 21:03:37.500905][Thread-2] Oh, oh, there we go, there we go, we're going now, we're going now. I don't know. I don't know if it's gonna do that.
+[2025-07-18 21:03:43.235774][Thread-1] good. This is great, this is great. Alright, let me do like some silence.
+[2025-07-18 21:03:48.535117][Thread-2] I don't know. I don't know if it's going to do that.
+[2025-07-18 21:03:52.948064][Thread-1] Thanks for watching!
+[2025-07-18 21:03:58.212674][Thread-2] I don't know. I don't know if it's gonna do that.
+[2025-07-18 21:04:03.268287][Thread-1] Oh, here it goes back to thanks for watching. Alright.
+[2025-07-18 21:04:07.584994][Thread-2] fun.
+[2025-07-18 21:04:12.398574][Thread-1] I think it does have some kinks in it.
+[2025-07-18 21:04:18.476384][Thread-2] Once it starts saying thanks for watching it never stops. Although, I don't know. I don't know if it's gonna do that.
+[2025-07-18 21:04:23.568274][Thread-1] that's great i think i need to just write it so
+[2025-07-18 21:04:29.620776][Thread-2] Thanks for watching. It's gonna just fucking stop it. I don't know. I don't know if it's gonna do that.
+[2025-07-18 21:04:35.178633][Thread-1] because we're like just delete it just I think we have a pre-processing step or just delete
+[2025-07-18 21:04:40.713297][Thread-2] watching stuff and then I'm gonna I don't know I don't know if it's gonna do that
+[2025-07-18 21:04:45.228591][Thread-1] and just use it.
+[2025-07-18 21:04:50.496936][Thread-2] I don't know. I don't know if it's gonna do that.
+[2025-07-18 21:04:55.153666][Thread-1] Okay, I think we're gonna-
+[2025-07-18 21:05:01.700404][Thread-2] Back to the... to the is louder than that. Nooo. I don't know. I don't know if it's gonna do that. Um...
+[2025-07-18 21:05:06.014601][Thread-1] Because...
+[2025-07-18 21:05:11.198698][Thread-2] And that now I don't know I don't know if it's gonna do that
+[2025-07-18 21:05:15.719465][Thread-1] Thank you for watching.
+[2025-07-18 21:05:21.085004][Thread-2] No, I don't know. I don't know if it's gonna do that.
+----
+[2025-07-18 21:09:06.309323][Thread-1] Okay so I changed the audio level to 100 right now and we will see if it likes that because when I try to do the search for voice thing it just didn't work but with the audio thing or with the mean being above a threshold I think they'll work a lot better because it did work before it didn't say like anything like
+[2025-07-18 21:09:11.583300][Thread-2] any like uh thanks for watching things it was just there so um that's good
+[2025-07-18 21:09:11.683572][Thread-1] ...
+[2025-07-18 21:09:51.919893][Thread-2] I might have fucked it up by deleting it. We'll see oh There we go, I think I did that just in time Okay, let's see let's see You
+[2025-07-18 21:10:31.077976][Thread-1] I might have fucked it up by deleting it. We'll see oh There we go, I think I did that just in time Okay, let's see let's see You
+[2025-07-18 21:11:09.218704][Thread-2] Okay so just copied that over again. That's not ideal. Could be worse though.
+[2025-07-18 21:11:49.779057][Thread-2] okay so is it gonna do anything is it gonna is gonna oh oh oh oh something's happening okay so it's very behind it's very slow we will see how that works later well let it run I'm gonna let it run its full time period I guess I guess you can call it
+[2025-07-18 21:12:29.133840][Thread-2] Um Okay, well he really wants to get my tower Okay, put your minor dude, yep Nice prediction, but it didn't do anything Um It seems to be very behind
+[2025-07-18 21:13:06.561482][Thread-2] These guys a cringe-ass deck
+[2025-07-18 21:13:44.751746][Thread-2] Okay, that was a good log, good log. We're still in it to win it.
+[2025-07-18 21:14:23.033307][Thread-2] Okay, now he's gonna win because he has a cringe-ass fucking death.
+-----
+[2025-07-18 21:17:59.052832][Thread-1] waste of oxygen it's insane I don't mind I win the game
+[2025-07-18 21:17:59.130751][Thread-2] ...
+[2025-07-18 21:18:39.129885][Thread-1] Alright, um, whoo! Nice, nice, when it was quiet it did dot dot dot dot. Okay, okay, cool, cool. Let's see if it keeps recording my audio and transcribing it like it's supposed to. Interesting play, he did Skelly Barrel at the very back.
+[2025-07-18 21:19:17.314452][Thread-2] Alright, um Whoo nice nice when it was quiet it did dot dot dot Whoo Okay, okay cool cool. Let's see if it keeps recording my audio and transcribing it like it's supposed to Interesting play he did skelly barrel at the very back
+[2025-07-18 21:19:58.031630][Thread-1] I'm just stupid I guess many PEC are so fucking powerful it's insane yeah I'll just say this can be like normal conversation this would be a good test I guess to see how it handles like quiet long periods of quiet long periods of talk and everything in between so okay giant scully down
+[2025-07-18 21:20:36.063157][Thread-1] Alright, he had a good uh... Come on... Zip! Yes. Oh, fuck, of course he has mini-pack, ah. And now I'm no longer up in damage. God fucking damn it.
+[2025-07-18 21:21:14.148929][Thread-1] I'm gonna go ahead and click on the fuck yeah, ignore that guy aww you big fat bastard
+[2025-07-18 21:21:52.949445][Thread-1] fucking course he has firecracker are we dead ass right now oh Loki we're good oh I forgot he has nevermind I win
+[2025-07-18 21:22:29.051634][Thread-1] Okay, so it has been working. Let me be quiet for a little bit and see if it glitches out.
+[2025-07-18 21:22:59.537691][Thread-1] ...
