@@ -7,7 +7,8 @@
 [2025-07-20 22:00:06] Notebook, perfect. I need to...
 [2025-07-20 22:00:27] Res.
 [2025-07-20 22:00:37] Let's add like a check system.
-[2025-07-20 22:00:48] Like you press the green check buttons if you want to add it to your calendar or an X to not add it to your calendar.
+[2025-07-20 22:00:48] Like you press the green check buttons if you want to add it to your calendar or an X to not add it to your calendar
+--------------------
 [2025-07-20 22:00:58] So you can kind of tell the difference like, oh, I don't remember being invited to a podcast party in the middle of nowhere. Oh, that must have been my friend talking about it.
 [2025-07-20 22:01:09] Yeah. Okay, so that should be enough text. Let's see. I was planning on going on a trip.
 [2025-07-20 22:01:19] The 23rd to the 27th which would go to my sister's place in Santa Barbara. I'm just gonna go.
@@ -21,3 +22,4 @@
 [2025-07-20 22:02:53] Yeah, just sit down for like 10 hours and train the AI to be like, oh, that's Victor's voice. That's how Victor talks. Um, I'll just lay.
 [2025-07-20 22:03:04] as that but it won't be able to tell if somebody else is talking about that with like it won't be able to tell if somebody's just
 [2025-07-20 22:03:14] day or if they're inviting me. Anyways, I'm gonna stop the transcription before this costs me a penny. All right, let me uh...
+--------------------
