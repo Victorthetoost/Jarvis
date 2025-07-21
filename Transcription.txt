@@ -1,9 +1,145 @@
-[2025-07-19 01:55:47] Okay, so I'm gonna make some quick data stuff. I'm gonna say like, oh I'm inviting you to my birthday party
-[2025-07-19 01:55:58] at 6pm at Newark mall there's gonna be you know people there I'm also thinking about having a meeting at 6pm
-[2025-07-19 01:56:08] on Thursday the 27th. So make sure you're there for that one. Very important. I also feel like
-[2025-07-19 01:56:19] should have a meeting to discuss your stocks at 6.15 p.m.
-[2025-07-19 01:56:29] and also I think we should really have a talk about the event
-[2025-07-19 01:56:40] to do on the 26th of April 2027 which will be launching our company called Jar...
-[2025-07-19 01:56:50] com and i think that's good so uh... yeah
-[2025-07-19 01:57:01] recording
-[2025-07-19 01:57:11] It is a
+[2025-07-20 19:54:48] It's been a bunch of audio. Get some data. This is going to be just from reels. I'm going to get the...
+[2025-07-20 19:54:58] uh audio transcriber thing i just want to get a bunch of test data and then i'm going to send it to chadgbt see how much that
+[2025-07-20 19:55:09] And then ask it like, hey, which API model would be best for it to make.
+[2025-07-20 19:55:19] like calendar date thingies and make csv files and stuff like that so
+[2025-07-20 19:55:30] Oh, I forgot to mention basically I'm just gonna scroll through real skit like 10-20 minutes of this stuff. Just get a big...
+[2025-07-20 19:55:40] And then, yeah, once in a while I'll pause and I'll say like, you know, Oh, hi man, how you doing? Been a while.
+[2025-07-20 19:55:51] I met you in a while. Hey, Donav, how you doing? Uh, I just wanted to ask you, like, what you've been up to. Oh, man, you know, not much.
+[2025-07-20 19:56:01] I've been planning an event actually pretty pretty recently. Do you want to come over on the 20th? I'm having my birthday party Oh, so
+[2025-07-20 19:56:12] Sure what time what time will it be and where will it be? Oh, you know the 20th of August and it will be at 3 p.m.
+[2025-07-20 19:56:22] New work mall we were we're gonna go shopping then maybe go, you know go carding stuff like that
+[2025-07-20 19:56:33] If Exxon thought they were the future, they'd be putting them up all over the place. What the f*** is this argument? I'm sorry. If wind turbines worked, where would they be?
+[2025-07-20 19:56:43] Turbine! He's here against Luigi because he killed the CEO of United Health Care.
+[2025-07-20 19:56:54] He took an American flag and started beating a cop with him over and over again in steps of our Capitol building until that cop died. Trump would
+[2025-07-20 19:57:04] No, Trump is seeking the death penalty!
+[2025-07-20 19:57:15] Played Mario Bros. Wii with friends, you probably know that having two players ground pound at the same time instantly defeats all of the enemies touching the ground. This technique-
+[2025-07-20 19:57:25] Collect 1-ups, complete challenges, and even defeat bosses. But what happens if we try to use this ability on Bowser? And is this effect more powerful if we ground-
+[2025-07-20 19:57:36] 4 players instead of 2. Let's find out. As soon as Luigi and I entered the final boss fight, we performed a synchronized ground pound, which pretty much did nothing. But after
+[2025-07-20 19:57:46] In two more, we were able to finish the job, which let us hit a button without any enemies in our way. Now, after Bowser entered his second phase, we tried ground pounding again.
+[2025-07-20 19:57:57] They did absolutely nothing. Next, I added the toads to see if before Player Grand Pound would have extra power. It doesn't. If you've ever played Mario- This is probab-
+[2025-07-20 19:58:07] Thanks for watching!
+[2025-07-20 19:58:18] That's better than one mega night. Two mega nights.
+[2025-07-20 19:58:28] Yeah, that's right. Two meganites. And let me tell you, do you know what's better than two meganites?
+[2025-07-20 19:58:39] Mega Knight. Oh my god! After all that? Yes, go off! You guys know the only thing that's bad? If you're young, your main priority needs to be getting up.
+[2025-07-20 19:58:49] Moving in with your friends. I mean just look we got my PC in there his PC in there We're just grinding all day working. We only keep healthy shit in our fridge and every single day that we are literally just out
+[2025-07-20 19:59:00] The funny part about it is it is really not that expensive. How many players? 26.1 million. Playing one game at the same time. Yup. You realize you just-
+[2025-07-20 19:59:10] concurrent player record right? Really? Yeah, Fortnite used to hold 8. They did? You bet your Riz we did. Galactus event, we had 15.3 million concurrent players.
+[2025-07-20 19:59:21] Please prepare that. What were they playing? It's a really popular game on our platform right now called Grow a Garden. Grow a Garden? It's a really fun game.
+[2025-07-20 19:59:31] Grow a garden. So let me get this straight. You guys had more players than half of Steam. Wait, what? We're currently playing a game where you just grow a-
+[2025-07-20 19:59:42] Yep, that's exactly right. What? How many players? Ah, I'm glad I'm not a party person. Because I'll be going to them parties and just start dropping light flies. It's not even worth the risk.
+[2025-07-20 19:59:52] Worry about my safety? Fuck I worry about if I'm gonna get shot? Is it really fun? Is it really a party? I feel like every time I hear they're gonna party, someone either gets shot or someone either gets hurt. Bye! Bye!
+[2025-07-20 20:00:03] Hi, hi, what's up? Yeah. Oh, uh, doctor's appointment at 7 p.m. on Thursday.
+[2025-07-20 20:00:13] Yeah, okay, okay, I can make that. Alright, cool. See ya. Bye bye.
+[2025-07-20 20:00:24] Exam student suddenly raised his hand and claimed he had a stomachache the invigilator let him leave the room to go to the Restroom, but instead of going straight to the toilet the student headed into a stall
+[2025-07-20 20:00:34] Earlier, he had an administrative-looking jacket. He put it on, transforming himself into what looked like a school official. Calmly, he strolled into the neighboring classroom, where an exam was also underway.
+[2025-07-20 20:00:45] The lady in that  room didn't recognize him and saw the formal outfit. She assumed he was some education department supervisor She nervously greeted him the student fully committed to the act replied
+[2025-07-20 20:00:55] No worries. I'm just here to take a look around. He then walked casually around a classroom, pretending to inspect the environment while sneakily glancing at several top students' test papers. Before
+[2025-07-20 20:01:06] Bill in character, he even reminded the teacher, please maintain strict discipline in the room. Then he returned to the bathroom, changed back into his school uniform, and went back to his own exam room to con-
+[2025-07-20 20:01:16] Now armed with all the answers he needed, unfortunately for him, someone in the other classroom recognized him and reported him. During an exam. And as long as you're doing this in a hurry...
+[2025-07-20 20:01:27] Not legally. Excuse me, how am I harassing you? You're harassing me. Go get the permit and you won't have a problem. Okay. What? Where's the permit? Where's the permit?
+[2025-07-20 20:01:37] It's the impartment graduate.
+[2025-07-20 20:01:48] Thank you.
+[2025-07-20 20:01:58] Yeah, there's something interesting could happen if I took a sealed glass jar to the bottom of the ocean. So first I got my jar, and then I went to the bottom of the ocean. My first question was, does the-
+[2025-07-20 20:02:09] and yes it does. I almost lost it. People have been asking how I stay stuck at the bottom. I wear a pretty heavy weight belt, but despite that I'm still able to float at the surface by keeping my lung-
+[2025-07-20 20:02:19] Don't blow any air out to sink, and the way that it works is that my lungs are compressed to half their size at 33 feet, meaning I am half as buoyant. Having said, I just made a million dollars.
+[2025-07-20 20:02:30] We just killed a goblin scientist and I did! Oh my god it was so worth it! It was so worth it! Every ounce of elixir! What's beautiful! We'll go pre-lo-
+[2025-07-20 20:02:40] The wind was low, which I've learned. So we're going to risk it and go with an earthquake.
+[2025-07-20 20:02:51] Now Tesla's one shot, pre-log again. You gotta go Goblin Gang or that's just another hit. You know what, I'll take it. Bro, why would you not play Goblin Gang? So we'll go with Ice Spirit like this just to distract the Firecracker.
+[2025-07-20 20:03:01] Skellige's hopefully can yeah look at that. Oh my gosh like you just you know I'm gonna do firecracker is what I mean Like you know I'm doing that. I'm gonna go earthquake just to slow everything down my firecracker
+[2025-07-20 20:03:12] Die, but his scientist dies too. Uh, this is gonna be a little iffy. Let's hopefully snipe out his firecracker. I won't do!
+[2025-07-20 20:03:22] He's literally only gotten log damage on my towers by the way, I just want to point that out. And we'll go log as well plus ice spear to counter all the wall breakers, or one wall breaker and a firecracker, but oh my god it's all dead.
+[2025-07-20 20:03:33] Only take it long damage this game bro Nothing, but long damage, and we just do this and this everything lines up Log this out so it dies protect our firecracker with his
+[2025-07-20 20:03:43] Firecracker shoot! Oh my god, his firecracker is dead. It doesn't mathematically get better. The only damage we took all game was king tower and log damage. I just spent a million elixir to hopefully just kill the goblin.
+[2025-07-20 20:03:54] I did! Oh my god it was so worth it! It was so worth it! Remember the company that resurrected the dire wolf from extinction? Well, we've got a crazy update on it. Six months-
+[2025-07-20 20:04:04] Okay.
+[2025-07-20 20:04:15] I will say that earthly treasures will not be in heaven in there. If you have to leave a blue state to go move to a red state, and you can't afford to live where you've been living, do not come to my...
+[2025-07-20 20:04:36] to be Californians aren't actually native Californians.
+[2025-07-20 20:04:46] California is the fourth stickiest state, meaning that the overwhelming majority of people.
+[2025-07-20 20:05:07] A smart condom is the future. AI isn't being used the way it should be. Don't let others fool you with the AI buzzword. It's...
+[2025-07-20 20:05:18] Horrified machine learning, really? Thank you. This was genuinely one of the most traumatic experiences of my life. To the point where if somebody came up to me right now...
+[2025-07-20 20:05:28] Ask me, Daddy B, what was the worst day of your life? This would be in the conversation? It's not like, oh, Evil Valkyrie 1. No, it's not just that. It's the fact that I'm not going to be able to do it.
+[2025-07-20 20:05:39] In our group, in our game population of players, 34% of the game voted for Ivo Halker. You shitting me? Hey!
+[2025-07-20 20:05:49] I'm gonna go as far as add the 15% from Evil Wizard because you guys are just as sorry sacks as the evil Bob voters. I'm gonna say, it's all those guys that said
+[2025-07-20 20:06:00] I made alternate accounts and I voted for Evil Falcon every single one of them. I hope one of your AirPods falls in the toilet. Don't cry hell of a boss fan.
+[2025-07-20 20:06:10] Cooner merch to feed you for your entire life. Shark robot, bring in the merch of the quinks of the freezing kink here, the boys are hungry. Don't cry, help-
+[2025-07-20 20:06:21] WhoopiJukunov built this interactive globe that shows the most famous person born in every location. Fame is based on Wikipedia. Who is mine from homeless?
+[2025-07-20 20:06:31] It's me! It's me, No Sh- What's it called? Wait, where's Rebecca? I don't even know. Am I brand new? That's a composer, music, musician. Uh, yeah, I-
+[2025-07-20 20:06:42] Toby Juikanoff built this interactive- Hey, why is your- Watch out, this guy's coming right at us. Hey, what's the photo? I'm very hate. We carry the largest-
+[2025-07-20 20:06:52] This pride flag to ever be flown in a national park to prove a point that trans is national I guess i'm heading up to yosemite to take that
+[2025-07-20 20:07:02] Lag down. I was thinking I might replace it with this one. Oh, it's so tough. What are you gonna do? Go write them a shitty diss track?
+[2025-07-20 20:07:13] Thank you. Bye.
+[2025-07-20 20:07:34] Here, try this. Actually, even you, I can't start with this. Let me start you with this guy, right? No, no, wait, wait, wait. What's up with that one? The PXG Proto.
+[2025-07-20 20:07:44] People like to be scum. This guy is not going to take no for an answer. Go ahead.
+[2025-07-20 20:07:55] Thank you. This, let me take a swing. Feel like you should sign a waiver. Come on. Hi. Fine.
+[2025-07-20 20:08:05] I think we got a new mayor of Hound Town! That's so good! Yikes! Oh!
+[2025-07-20 20:08:16] I see it. Odo has internal twin vertical bars. It's in freight for all that. She and the face of the club. Boom, it's gone. All right, let's.
+[2025-07-20 20:08:26] Can we ring Dale up for a proto and let's throw in a box of the Pro V on the house? Here try this. You fold.
+[2025-07-20 20:08:37] And versus wing conditions started off with the royal hawks where you can see the evil electric dragon can fully counter them Next is going up against an elixir golem battle
+[2025-07-20 20:08:47] Which push and that electric chain is insane being able to fully counter this push by itself. Next is going up against a very spammy army.
+[2025-07-20 20:08:58] with wall breakers and a skeleton valve but because that electric chain can go on forever it cleans everything. Nice we have a giant double prince purge
+[2025-07-20 20:09:08] Super satisfying how you can see the electric chain go between the three units constantly stunning them and fully countering this push. Like we have a POKEMON-
+[2025-07-20 20:09:19] And once again it doesn't even stand a chance this evolution is so broken Subscribe for more Evolved Electrode in the United States
+[2025-07-20 20:09:29] high housing costs, low wages, and many other factors has resulted in a significant increase in the homeless population. To combat this growing problem,
+[2025-07-20 20:09:40] The United States government came up with an ingenious solution. It gave $9 billion to the United States, high housing costs, low
+[2025-07-20 20:09:50] Any other factors have resulted in a significant increase in the homeless population.
+[2025-07-20 20:10:01] Thanks for watching!
+[2025-07-20 20:10:11] Don't fall, don't fall! Okay, to do the secret back rooms ending... Wait a minute, wait a minute. Oh, she's right there. Hold on. You have to fall perfectly on this fence.
+[2025-07-20 20:10:22] Perfect, okay. Please don't touch me, please. Oh, okay. She's crawling back up. Go. Where's she coming from?
+[2025-07-20 20:10:32] Oh my god, oh my god, oh my god, go. Oh my god, go. Okay, so now what you're supposed to do is leave that house, walk across-
+[2025-07-20 20:10:43] And just go straight this way
+[2025-07-20 20:11:14] Confident? Oh no, she just needs some confidence, that's all. I am sure. She's fast. Confidence? She's blind! What? Look at her, Claudia!
+[2025-07-20 20:11:25] I'm going to leave you with this. I'm going to leave you with this. Let's see. You can do this. Wait.
+[2025-07-20 20:11:35] Thanks a bunch folks!
+[2025-07-20 20:11:46] The end of the race the hot rodent the first to grab that tasting tree is
+[2025-07-20 20:11:56] See, a strong wave carries the spider fish into the burst of relapse. That'll come away in Cora with one exception. Oh, Thwasty must've dozed off the cover, right? She didn't-
+[2025-07-20 20:12:28] Thank you.
+[2025-07-20 20:12:38] We have to go through the rings. We're going through the splice there. We have to go in permanent fracture ground.
+[2025-07-20 20:12:49] Wait, I'm gonna help Krusty win! Krusty win? Yes, Krusty win. Just do what I say. Okay, right. Good question. There was a...
+[2025-07-20 20:12:59] Thank you to whoever showed me this workout. My stomach is slimming, my arms are getting toned, and my back is...
+[2025-07-20 20:13:10] Okay.
+[2025-07-20 20:13:20] In the 70s, in Canada in the 70s, the Canadian government chose a town, random, this town called Dofam.
+[2025-07-20 20:13:31] So to a group of people in this town, we're going to give you guys the possible future, we're going to give all of you a guaranteed basic income, we're going to give you the equivalent of, in today's money, 15,000.
+[2025-07-20 20:13:41] There's nothing you can do that means we'll take it away from you and there's nothing you have to do to return it. The citizens of our country want you to have a good life. Loads of interesting things happened. People spent more time with their kids.
+[2025-07-20 20:13:52] But a lot of people turned down shitty jobs so actual overall work standards improved because some employers had to attract better standards. The most interesting thing is there was a huge...
+[2025-07-20 20:14:02] Anxiety. Depression and anxiety that was so severe people had to be hospitalized fell by 9%, which is remarkable in just three years. Dr. Bourget said, financial anxiety is a massive...
+[2025-07-20 20:14:13] dispense. I mean, this stands for you're not recognized. That's not how part of stands for you're not recognized all day. But that's not how it stands for you're not.
+[2025-07-20 20:14:23] I'm going to get you a Robert. Miss Danbury and not the not Miss Danbury here.
+[2025-07-20 20:14:55] Let's see, I've got a date planned on August 11th from 12 noon to about 7 p.m.
+[2025-07-20 20:15:05] I also want to do some homework. There's some homework I have to do by 8 p.m. on Friday.
+[2025-07-20 20:15:16] See, there's also an assignment that I have to do for biology that is due at 6 p.m.
+[2025-07-20 20:15:26] you
+[2025-07-20 20:15:37] get to transcribing all right let's see
+[2025-07-20 20:15:47] Now let's see the scoop.
+----------------------------------------------
+
+[2025-07-20 21:42:59] Okay, so we're going to do a little quick test. What we're going to do is just say kind of like, Have a
+[2025-07-20 21:43:09] Very soon I'll have an event where somebody's attending and we're going to be going somewhere. So here we go.
+[2025-07-20 21:43:20] I haven't seen you in a while. Me and Donav were planning on going on this birthday trip to this place called Loon Lake where we're gonna fish.
+[2025-07-20 21:43:30] for three days from let's say August 11th to August 14th we're gonna fish there there's gonna be sunny it's gonna be hot
+[2025-07-20 21:43:41] But we're gonna have a lot of fun. Again me and Don of are going my name is Victor. And we're also going to.
+[2025-07-20 21:43:51] Come back at 7 p.m. and we're gonna start going there at around 8 a.m. So yeah, be ready.
+[2025-07-20 21:44:02] Okay, we'll just let that simmer, let that all get written down, and then we will...
+-----------------------------------------------
+[2025-07-20 21:59:03] Okay, here we go, test number three. So I'm going to talk for like a minute or two and then I'm going to start feeding it some lines.
+[2025-07-20 21:59:14] Pretty good. I'm going somewhere this weekend. Oh, where are you going? And can I come with?
+[2025-07-20 21:59:24] Yeah, sure. I'm going on a fishing trip. Oh, I just realized something. I'm gonna have to make sure that it can tell the difference between me and you.
+[2025-07-20 21:59:35] and somebody else. That's gonna fuckin' suck. Actually...
+[2025-07-20 21:59:45] I'll just ignore it and I'll add a little note to self note to sell. Let me write this on a piece of paper.
+[2025-07-20 21:59:56] I don't have any paper yet. Those are my passwords.
+[2025-07-20 22:00:06] Notebook, perfect. I need to...
+[2025-07-20 22:00:27] Res.
+[2025-07-20 22:00:37] Let's add like a check system.
+[2025-07-20 22:00:48] Like you press the green check buttons if you want to add it to your calendar or an X to not add it to your calendar.
+[2025-07-20 22:00:58] So you can kind of tell the difference like, oh, I don't remember being invited to a podcast party in the middle of nowhere. Oh, that must have been my friend talking about it.
+[2025-07-20 22:01:09] Yeah. Okay, so that should be enough text. Let's see. I was planning on going on a trip.
+[2025-07-20 22:01:19] The 23rd to the 27th which would go to my sister's place in Santa Barbara. I'm just gonna go.
+[2025-07-20 22:01:30] teach and stuff, go explore something, it's gonna be pretty warm. The drive is gonna be about five hours and we'll be leaving at around 12, I want to say around 12.
+[2025-07-20 22:01:40] around three and then I'll be coming back on the 27th and I'll be coming back at around 5 pm.
+[2025-07-20 22:01:51] My sister Anna and I will be just having a grand old time. I'm gonna drive there. It's gonna be fun.
+[2025-07-20 22:02:01] Also, I feel like a feature I should add is to find out who's who.
+[2025-07-20 22:02:12] Thanks for watching!
+[2025-07-20 22:02:22] Hello.
+[2025-07-20 22:02:43] know who invited me to who so I just need to have that like I need to figure out how I'm gonna recognize other people's voices because recognize
+[2025-07-20 22:02:53] Yeah, just sit down for like 10 hours and train the AI to be like, oh, that's Victor's voice. That's how Victor talks. Um, I'll just lay.
+[2025-07-20 22:03:04] as that but it won't be able to tell if somebody else is talking about that with like it won't be able to tell if somebody's just
+[2025-07-20 22:03:14] day or if they're inviting me. Anyways, I'm gonna stop the transcription before this costs me a penny. All right, let me uh...
