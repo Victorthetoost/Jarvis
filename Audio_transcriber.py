@@ -3,8 +3,10 @@ import traceback
 import queue
 import sounddevice as sd
 import numpy as np
+from sympy import true
 import whisper
 from datetime import datetime
+import datetime
 import time
 import transcription_to_csv
 
@@ -30,11 +32,7 @@ def record_audio():
             traceback.print_exc()
     print("Recording stopped.")
 
-def chagpt_transcribe_audio():
-    while true:
-        time.sleep(60*60)
-        print("ChatGPT transcription started...")
-        transcription_to_csv.transcribe_to_csv(output_file)
+
 
 
 def transcribe_audio():
@@ -57,12 +55,18 @@ def transcribe_audio():
             traceback.print_exc()
     print("Transcription stopped.")
 
+def chagpt_transcribe_audio():
+    while true:
+        time.sleep(60)
+        print("ChatGPT transcription started...")
+        transcription_to_csv.transcribe_to_csv(output_file)
 def main():
     recorder_thread = threading.Thread(target=record_audio)
     transcriber_thread = threading.Thread(target=transcribe_audio)
     Chatgpt_transcriber_thread = threading.Thread(target=chagpt_transcribe_audio)
     recorder_thread.start()
     transcriber_thread.start()
+    Chatgpt_transcriber_thread.start()
     print("Recording and transcription are running. Press Ctrl+C to stop.")
     try:
         while True:

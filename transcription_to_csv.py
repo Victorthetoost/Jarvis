@@ -5,11 +5,15 @@ import os
 import openai
 from openai import OpenAI
 from dotenv import load_dotenv, find_dotenv
+import datetime
 from datetime import datetime
 
-
 database = "Transcription.txt"
-
+datetime_now = datetime.now().strftime("%Y-%m-%d_%H")
+# we only need to do this once ever hour so it uses less resources.
+#cleaning step:
+cleaned_file_name = (f"cleaned_transcription" + datetime_now + ".txt")
+os.create(cleaned_file_name)
 def remove_filler(text):
     fillers = [
         "uh", "um", "okay", "ok", "so", "actually", "anyways", "just", "basically", "kinda",
@@ -48,10 +52,7 @@ def remove_filler(text):
     text = re.sub(r'\s([.,!?;:])', r'\1', text)
     return text.strip()
 
-datetime_now = datetime.datetime.now().strftime("%Y-%m-%d_%H")
-# we only need to do this once ever hour so it uses less resources.
-#cleaning step:
-cleaned_file_name = (f"cleaned_transcription" + datetime_now + ".txt")
+
 
 last_break = 1
 
@@ -77,9 +78,11 @@ with open(database, "r") as f:
         if sentence == "": #if its empty, skip it
             continue
         
-        
-        with open(cleaned_file_name, "a") as cleaned_file:
-            cleaned_file.write(sentence + "\n")
+        try: 
+            with open(cleaned_file_name, "a") as cleaned_file:
+                cleaned_file.write(sentence + "\n")
+        except Exception as e:
+            print("the cleaned file does not exist.")
 with open(database, "a") as f:
     f.write("-" * 20 + "\n")
 
