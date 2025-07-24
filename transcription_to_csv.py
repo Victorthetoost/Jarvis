@@ -5,7 +5,6 @@ import os
 import openai
 from openai import OpenAI
 from dotenv import load_dotenv, find_dotenv
-import datetime
 from datetime import datetime
 
 database = "Transcription.txt"
@@ -13,7 +12,9 @@ datetime_now = datetime.now().strftime("%Y-%m-%d_%H")
 # we only need to do this once ever hour so it uses less resources.
 #cleaning step:
 cleaned_file_name = (f"cleaned_transcription" + datetime_now + ".txt")
-os.create(cleaned_file_name)
+with open(cleaned_file_name,"a") as f:
+    f.write("\n")
+
 def remove_filler(text):
     fillers = [
         "uh", "um", "okay", "ok", "so", "actually", "anyways", "just", "basically", "kinda",
