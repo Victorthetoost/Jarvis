@@ -5,7 +5,6 @@ import sounddevice as sd
 import numpy as np
 from sympy import true
 import whisper
-from datetime import datetime
 import datetime
 import time
 import transcription_to_csv
@@ -25,7 +24,7 @@ def record_audio():
         try:
             recording = sd.rec(int(chunk_duration * samplerate), samplerate=samplerate, channels=1, dtype='float32')
             sd.wait()
-            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             audio_queue.put((recording.copy(), timestamp))
         except Exception as e:
             print("Error in record_audio:", e)
@@ -59,14 +58,16 @@ def chagpt_transcribe_audio():
     while true:
         time.sleep(60)
         print("ChatGPT transcription started...")
+        output_file = "Transcription.txt"
         transcription_to_csv.transcribe_to_csv(output_file)
 def main():
     recorder_thread = threading.Thread(target=record_audio)
     transcriber_thread = threading.Thread(target=transcribe_audio)
-    Chatgpt_transcriber_thread = threading.Thread(target=chagpt_transcribe_audio)
+    if transcriber_thread.is_alive() == False:
+        Chatgpt_transcriber_thread = threading.Thread(target=chagpt_transcribe_audio)
+        Chatgpt_transcriber_thread.start()
     recorder_thread.start()
     transcriber_thread.start()
-    Chatgpt_transcriber_thread.start()
     print("Recording and transcription are running. Press Ctrl+C to stop.")
     try:
         while True:
