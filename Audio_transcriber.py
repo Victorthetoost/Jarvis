@@ -11,7 +11,7 @@ import transcription_to_csv
 
 # Load Whisper model
 model = whisper.load_model("medium")
-
+stop = False
 samplerate = 8000  # 8kHz sample rate
 chunk_duration = 10  # seconds per chunk
 audio_queue = queue.Queue()
@@ -30,8 +30,6 @@ def record_audio():
             print("Error in record_audio:", e)
             traceback.print_exc()
     print("Recording stopped.")
-
-
 
 
 def transcribe_audio():
@@ -55,7 +53,7 @@ def transcribe_audio():
     print("Transcription stopped.")
 
 def chagpt_transcribe_audio():
-    while true:
+    while not stop_event.is_set():
         time.sleep(60)
         print("ChatGPT transcription started...")
         output_file = "Transcription.txt"
