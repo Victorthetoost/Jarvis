@@ -77,10 +77,12 @@ def main():
         transcriber_thread.join()
         print("All processes stopped.")
 
-if __name__ == "__main__":
+def run_transcription():
     while True:
         try:
             main()
         except Exception as e:
             traceback.print_exc()
 
+if __name__ == "__main__":
+    run_transcription() 
