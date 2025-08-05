@@ -6,3 +6,6 @@ figure out who is talking and when, and label that in real time so that its easi
 make a button that when pressed opens up a weekly schedule, where you can input your classes and the times at which they are supposed to be,
     and then the program records everything in those time slots, parses it for events and then makes detailed notes about what you learned and what you shoudl study
     aswell as any homewokr assignments or anythign like that. 
+
+for the main page make a calendar/list of things to do and have the floating text stuff just be the backround.
+    start with just the calendar and/or list of to-do items as that is the most important. 
