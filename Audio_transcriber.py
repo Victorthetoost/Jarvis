@@ -77,6 +77,9 @@ def main():
         transcriber_thread.join()
         print("All processes stopped.")
 
+
+
+
 def run_transcription():
     while True:
         try:
