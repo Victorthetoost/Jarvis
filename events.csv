@@ -2,4 +2,3 @@ event_name,event_date_start,event_date_end,start_time,end_time,event_location,im
 Meeting,2025-08-05,2025-08-05,09:00,10:00,Conference Room,Discuss budget,Alice,Bob
 Workout,2025-08-05,2025-08-05,18:00,19:00,Gym,Cardio focus,
 Doctor Appointment,2025-08-06,2025-08-06,10:00,10:30,Clinic,Checkup,
-
