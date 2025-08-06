@@ -13,6 +13,7 @@ from datetime import datetime, timedelta
 from kivy.uix.gridlayout import GridLayout
 import os
 import csv
+import pandas
 
 FILE_PATH = "Transcription copy.txt"
 
@@ -214,13 +215,13 @@ class DayDetailScreen(Screen):
     def update_day(self, day_str):
         self.day_label.text = day_str
         # Example static task list — could later be read from a file per day
+
+        #CHANGE THSI TO MAKE THIS A BIT BETTER BECAUSE IT NEEDS TO UPDATE THE TASKS FROM THE CSV FILE OR LIKE DISPLAY THE CSV FILE 
+        # ON THE SCRREEN WITH COLUMNS AND SHIT
+
         self.task_list.text = (
             f"[b]{day_str} Tasks[/b]\n\n"
-            "- Wake up early\n"
-            "- Meditate for 10 mins\n"
-            "- Complete daily code\n"
-            "- Read 10 pages\n"
-            "- Exercise\n"
+            
         )
 
 class SettingsScreen(Screen):
