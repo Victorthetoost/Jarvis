@@ -9,3 +9,7 @@ make a button that when pressed opens up a weekly schedule, where you can input 
 
 for the main page make a calendar/list of things to do and have the floating text stuff just be the backround.
     start with just the calendar and/or list of to-do items as that is the most important. 
+
+have the gps data, and find out where everything is. so if it says "event at newark mall etc" then it will find the average time from home to that place,
+    and also the time it will take to drive from current location. it will also give a "leave by" time which is travel time -5 min
+    
