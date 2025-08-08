@@ -87,7 +87,7 @@ class TranscriberScreen(Screen):
         btn_start = Button(text = "Start Transcribing")
         btn_start.bind(on_press = start_external_script)
         button_layout.add_widget(btn_start)
-        
+
         layout.add_widget(button_layout)
 
         self.add_widget(layout)
@@ -129,10 +129,13 @@ class MainScreen(Screen):
         btn_start_rec.bind(on_press = lambda _: setattr(self.manager, 'current', 'transcriber'))
         nav.add_widget(btn_start_rec)
 
-        self.add_widget(self.layout)
-        self.refresh()
+        
 
-    def refresh(self):
+        self.add_widget(self.layout)
+
+        Clock.schedule_interval(self.refresh, 0.5)
+
+    def refresh(self, dt = 0):
         self.task_grid.clear_widgets()
         tasks = load_csv(APPROVAL_CSV)
         for task in tasks:
