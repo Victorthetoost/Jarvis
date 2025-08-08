@@ -16,7 +16,7 @@ samplerate = 8000  # 8kHz sample rate
 chunk_duration = 10  # seconds per chunk
 audio_queue = queue.Queue()
 stop_event = threading.Event()
-output_file = "Transcription.txt"
+output_file = "Transcript.txt"
 
 def record_audio():
     print("Recording started...")
@@ -54,10 +54,11 @@ def transcribe_audio():
 
 def chagpt_transcribe_audio():
     while not stop_event.is_set():
-        time.sleep(60)
+        time.sleep(60 )
         print("ChatGPT transcription started...")
-        output_file = "Transcription.txt"
+        output_file = "Transcript.txt"
         transcription_to_csv.transcribe_to_csv(output_file)
+
 def main():
     recorder_thread = threading.Thread(target=record_audio)
     transcriber_thread = threading.Thread(target=transcribe_audio)

@@ -7,6 +7,8 @@ from openai import OpenAI
 from dotenv import load_dotenv, find_dotenv
 import datetime
 
+temp_csv = "pending_events.csv"
+
 def transcribe_to_csv(database):
     datetime_now = datetime.datetime.now().strftime("%Y-%m-%d_%H")
     # we only need to do this once ever hour so it uses less resources.
@@ -111,10 +113,10 @@ def transcribe_to_csv(database):
 
         #saves to csv file for later use.
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H")
-        filename = f"extraction_{timestamp}.csv"
 
+        filename = temp_csv
 
-        with open(filename, 'w', encoding='utf-8') as f:
+        with open(temp_csv, 'a', encoding='utf-8') as f:
             f.write(csv_content)
 
         print(f"CSV saved as: {filename}")

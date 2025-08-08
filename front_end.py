@@ -9,10 +9,14 @@ from kivy.uix.gridlayout import GridLayout
 import csv
 import os
 from datetime import datetime, timedelta
+import subprocess
+from kivy.clock import Clock
+from kivy.uix.textinput import TextInput
+import os
 
 APPROVAL_CSV = "pending_events.csv"
 CALENDAR_CSV = "events.csv"
-
+process = None
 
 def load_csv(file_path):
     if not os.path.exists(file_path):
@@ -25,10 +29,84 @@ def save_csv(file_path, data):
     if not data:
         open(file_path, 'w').close()
         return
+    
+    # Remove None keys and unify headers across all rows
+    all_keys = set()
+    for row in data:
+        all_keys.update(k for k in row.keys() if k is not None)
+    
+    fieldnames = list(all_keys)
+
     with open(file_path, 'w', newline='', encoding='utf-8') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=data[0].keys())
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
-        writer.writerows(data)
+        for row in data:
+            clean_row = {k: row.get(k, "") for k in fieldnames}
+            writer.writerow(clean_row)
+
+def start_external_script(instance):
+    global process
+    if process is None or process.poll() is not None:
+        process = subprocess.Popen(['python', 'Audio_transcriber.py'])
+        print("Subprocess launched successfully!")
+
+def stop_external_script(instance):
+    global process
+    if process and process.poll() is None:
+        process.terminate()
+        process = None
+        print("Subprocess terminated.")
+
+class TranscriberScreen(Screen):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+        layout = BoxLayout(orientation='vertical')
+
+        # Transcript display
+        self.transcript_display = TextInput(
+            text="",
+            readonly=True,
+            size_hint_y=0.9,
+            background_color=(0, 0, 0, 1),  # black background
+            foreground_color=(1, 1, 1, 1),  # white text
+            font_size=25
+        )
+        layout.add_widget(self.transcript_display)
+
+        # Buttons row
+        button_layout = BoxLayout(size_hint_y=0.1)
+        back_btn = Button(text = "Back")
+        back_btn.bind(on_press=lambda *_: setattr(self.manager, 'current', 'main'))
+        button_layout.add_widget(back_btn)
+
+        btn_stop = Button(text = "Stop Transcribing")
+        btn_stop.bind(on_press = stop_external_script)
+        button_layout.add_widget(btn_stop)
+
+        btn_start = Button(text = "Start Transcribing")
+        btn_start.bind(on_press = start_external_script)
+        button_layout.add_widget(btn_start)
+        
+        layout.add_widget(button_layout)
+
+        self.add_widget(layout)
+
+        # Path to transcript file
+        self.transcript_file = "Transcript.txt"
+
+        # Update every 0.5 sec
+        Clock.schedule_interval(self.update_transcript, 0.5)
+
+    def update_transcript(self, dt):
+        if os.path.exists(self.transcript_file):
+            with open(self.transcript_file, "r", encoding="utf-8") as f:
+                text = f.read()
+                if text != self.transcript_display.text:
+                    self.transcript_display.text = text
+                    self.transcript_display.cursor = (0, len(self.transcript_display.text))
+
+    
 
 
 class MainScreen(Screen):
@@ -47,6 +125,10 @@ class MainScreen(Screen):
         nav.add_widget(btn_calendar)
         self.layout.add_widget(nav)
 
+        btn_start_rec = Button(text = "Transcriber")
+        btn_start_rec.bind(on_press = lambda _: setattr(self.manager, 'current', 'transcriber'))
+        nav.add_widget(btn_start_rec)
+
         self.add_widget(self.layout)
         self.refresh()
 
@@ -58,8 +140,8 @@ class MainScreen(Screen):
             summary = f"{task['event_name']} on {task['event_date_start']} @ {task['start_time']}"
             label = Label(text=summary, halign='left', valign='middle')
             label.text_size = (Window.width - 150, None)
-            approve_btn = Button(text="✔", size_hint_x=None, width=50, background_color=(0, 1, 0, 1))
-            deny_btn = Button(text="✖", size_hint_x=None, width=50, background_color=(1, 0, 0, 1))
+            approve_btn = Button(text="yes", size_hint_x=None, width=100, background_color=(0, 1, 0, 1))
+            deny_btn = Button(text="naw", size_hint_x=None, width=100, background_color=(1, 0, 0, 1))
             approve_btn.bind(on_press=lambda _, t=task: self.approve(t))
             deny_btn.bind(on_press=lambda _, t=task: self.deny(t))
             box.add_widget(label)
@@ -67,10 +149,23 @@ class MainScreen(Screen):
             box.add_widget(deny_btn)
             self.task_grid.add_widget(box)
 
+    #def approve(self, task):
+    #    events = load_csv(CALENDAR_CSV)
+    #    events.append(task)
+    #    save_csv(CALENDAR_CSV, events)
+    #    self.deny(task)  # Remove from pending list
     def approve(self, task):
+        print("\n--- DEBUG: Approving Task ---")
+        print("Task keys:", list(task.keys()))
+        print("Task data:", task)
+
         events = load_csv(CALENDAR_CSV)
+        print("Current CSV keys:", list(events[0].keys()) if events else "No existing events")
+
         events.append(task)
         save_csv(CALENDAR_CSV, events)
+        print("--- DEBUG: Save complete ---\n")
+
         self.deny(task)  # Remove from pending list
 
     def deny(self, task):
@@ -102,6 +197,34 @@ class CalendarScreen(Screen):
         self.manager.get_screen('day_detail').show_day(date)
         self.manager.current = 'day_detail'
 
+class DayEventExpansion(Screen):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.layout = BoxLayout(orientation='vertical', padding=20, spacing=10)
+        self.label = Label(text="Event Details", halign='left', valign='top')
+        self.label.text_size = (Window.width * 0.9, None)
+        self.layout.add_widget(self.label)
+
+        back_btn = Button(text="Back", size_hint_y=None, height=40)
+        back_btn.bind(on_press=self.go_back)
+        self.layout.add_widget(back_btn)
+
+        self.add_widget(self.layout)
+
+    def display_event(self, event):
+        details = (
+            f"Event: {event['event_name']}\n\n"
+            f"Date: {event['event_date_start']}\n"
+            f"Time: {event['start_time']} - {event['end_time']}\n"
+            f"Location: {event['event_location']}\n"
+            f"People Attending: {event['people_attending']}\n"
+            f"Details: {event['important_details']}"
+        )
+        self.label.text = details
+
+    def go_back(self, instance):
+        self.manager.current = 'day_detail'
+
 
 class DayDetailScreen(Screen):
     def __init__(self, **kwargs):
@@ -131,7 +254,6 @@ class DayDetailScreen(Screen):
     def show_day(self, day_str):
         self.title.text = f"Events on {day_str}"
         self.events_grid.clear_widgets()
-        print(f"Trying to parse day_str: '{day_str}'")
         try:
             parsed_date = datetime.strptime(day_str, "%Y-%m-%d")
             date_key = parsed_date.replace(year=datetime.today().year).strftime("%Y-%m-%d")
@@ -147,24 +269,18 @@ class DayDetailScreen(Screen):
     
             # Delete button
             delete_btn = Button(text='Delete', size_hint_x=0.1, background_color=(1, 0, 0, 1))
-            delete_btn.bind(on_press=lambda btn, ev=event: self.delete_event(ev,parsed_date))
+            delete_btn.bind(on_press=lambda btn, ev=event: self.delete_event(ev, day_str))
             row.add_widget(delete_btn)
     
-            # Event name
-            row.add_widget(Label(text=event['event_name'], size_hint_x=0.2))
-    
-            # Time
+            # Event name as a button (goes to DayEventExpansion screen)
+            btn_event = Button(text=event['event_name'], size_hint_x=0.3)
+            btn_event.bind(on_press=lambda _, ev=event: self.open_event_detail(ev))
+            row.add_widget(btn_event)
+
+            # Time and location
             row.add_widget(Label(text=f"{event['start_time']} - {event['end_time']}", size_hint_x=0.2))
-    
-            # Location
             row.add_widget(Label(text=event['event_location'], size_hint_x=0.2))
-    
-            # People and notes
-            people_and_notes = f"people attending: {event['people_attending']}\nimportant details: {event['important_details']}"
-            label = Label(text=people_and_notes, size_hint_x=0.3, halign='left', valign='middle')
-            label.text_size = (Window.width * 0.3, 60)
-            row.add_widget(label)
-    
+
             self.events_grid.add_widget(row)
 
     def delete_event(self, event, date):
@@ -173,6 +289,11 @@ class DayDetailScreen(Screen):
         save_csv(CALENDAR_CSV, events)
         self.show_day(date)
 
+    def open_event_detail(self, event):
+        event_screen = self.manager.get_screen('event_detail')
+        event_screen.display_event(event)
+        self.manager.current = 'event_detail'
+
 
 class TaskApp(App):
     def build(self):
@@ -180,6 +301,8 @@ class TaskApp(App):
         sm.add_widget(MainScreen(name='main'))
         sm.add_widget(CalendarScreen(name='calendar'))
         sm.add_widget(DayDetailScreen(name='day_detail'))
+        sm.add_widget(DayEventExpansion(name = 'event_detail'))
+        sm.add_widget(TranscriberScreen(name = 'transcriber'))
         return sm
 
 
