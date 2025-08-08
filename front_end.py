@@ -178,13 +178,16 @@ class MainScreen(Screen):
         self.refresh()
 
 
+#MAKE THIS SCROLLABLE AND SHOW THE NEXT 2 WEEKS ASWELL AS A LIST OF ALL THE TASKS THAT ARE NOT
+# FITTING ON THE 2 WEEKS.
+
 class CalendarScreen(Screen):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         layout = BoxLayout(orientation='vertical', padding=10, spacing=10)
         grid = GridLayout(cols=2, spacing=10, size_hint_y=0.8)
         today = datetime.today()
-        for i in range(8):
+        for i in range(30):
             day = today + timedelta(days=i)
             date_str = day.strftime("%Y-%m-%d")
             btn = Button(text=day.strftime("%A\n%d %B"), size_hint_y=None, height=100)
