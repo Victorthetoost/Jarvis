@@ -12,4 +12,8 @@ for the main page make a calendar/list of things to do and have the floating tex
 
 have the gps data, and find out where everything is. so if it says "event at newark mall etc" then it will find the average time from home to that place,
     and also the time it will take to drive from current location. it will also give a "leave by" time which is travel time -5 min
-    
+
+make the main calendar better. isntead of jsut showing the next 7 days, i need to make it so that it can show hte next months aswell.
+    basically the main screen will be the next 30 days or so, and then you can click on a button that shows the number of tasks per month, and then you can click
+    on the month to show the weeks in the month and what you have to do there.
+    thats about it
