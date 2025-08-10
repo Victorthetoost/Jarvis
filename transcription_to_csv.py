@@ -111,7 +111,7 @@ def transcribe_to_csv(database):
         )
         csv_content = response.choices[0].message.content
         fact_check = openai.chat.completions.create(
-            model = "gpt-4o"
+            model = "gpt-4o",
             message = [
                 {"role": "system","content": "you are a fact checking reporter who fact checks statements, and gives sources that either support or refure the statement"}
                 {"role": "user","content": "if there is a \"fact check\" or anythign similar (ie, no way thats true, i dont believe that etc...) in this text: \n " + transcript +
@@ -120,7 +120,9 @@ def transcribe_to_csv(database):
             ]
         )
         fact_check_response = fact_check.choices[0].message.content
-        
+
+        with open("Transcript.txt","a") as f:
+            f.write(f"----FACT CHECK---- \n" + fact_check_response + "----FACT CHECK----")
         #saves to csv file for later use.
 
         filename = temp_csv
