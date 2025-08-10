@@ -155,11 +155,7 @@ class MainScreen(Screen):
             box.add_widget(deny_btn)
             self.task_grid.add_widget(box)
 
-    #def approve(self, task):
-    #    events = load_csv(CALENDAR_CSV)
-    #    events.append(task)
-    #    save_csv(CALENDAR_CSV, events)
-    #    self.deny(task)  # Remove from pending list
+
     def approve(self, task):
         print("\n--- DEBUG: Approving Task ---")
         print("Task keys:", list(task.keys()))

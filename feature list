@@ -17,3 +17,5 @@ make the main calendar better. isntead of jsut showing the next 7 days, i need t
     basically the main screen will be the next 30 days or so, and then you can click on a button that shows the number of tasks per month, and then you can click
     on the month to show the weeks in the month and what you have to do there.
     thats about it
+
+i need ot make a button that fact checks the last 2 min of conversation and outputs it in a little text box on the live transcription screen. 
