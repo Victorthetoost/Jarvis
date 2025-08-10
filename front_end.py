@@ -15,6 +15,7 @@ from kivy.uix.textinput import TextInput
 import os
 from dateutil.relativedelta import relativedelta
 from datetime import date
+import calendar
 
 APPROVAL_CSV = "pending_events.csv"
 CALENDAR_CSV = "events.csv"
@@ -197,15 +198,18 @@ class CalendarScreen(Screen):
             grid.add_widget(btn)
         grid_month = GridLayout(cols=4, spacing=10,size_hint_y=0.8)
         today = date.today()
-        for i in range(12):  # 0 through 11 = 12 months
+        for i in range(12):
             month = today + relativedelta(months=i)
-            date_str = month.strftime("%Y-%m")
+            year = month.year
+            month_num = month.month
+
             btn = Button(
                 text=month.strftime("%B %Y"),  # e.g., "August 2025"
                 size_hint_y=None,
                 height=100
             )
-            btn.bind(on_press=lambda _:setattr(self.manager, 'current','month_event_expansion'))
+            # Pass year & month but also go to month_event_expansion
+            btn.bind(on_press=lambda _, y=year, m=month_num: self.open_month(y, m))
             grid_month.add_widget(btn)
         layout.add_widget(grid)
         layout.add_widget(grid_month)
@@ -214,26 +218,55 @@ class CalendarScreen(Screen):
         layout.add_widget(back_btn)
         self.add_widget(layout)
 
+    def open_month(self, year, month):
+        # Pass data to the month_event_expansion screen
+        month_screen = self.manager.get_screen('month_event_expansion')
+        month_screen.show_month(year, month)
+
+        # Switch to that screen
+        self.manager.current = 'month_event_expansion'
+
     def open_day(self, date):
         self.manager.get_screen('day_detail').show_day(date)
         self.manager.current = 'day_detail'
 
+
 class MonthEventExpansion(Screen):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-        layout = BoxLayout(orientation='vertical', padding=10, spacing=10)
-        grid = GridLayout(cols=7, spacing=10, size_hint_y=0.8)
-        today = datetime.today()
-        for i in range(30):
-            day = today + timedelta(days=i)
-            date_str = day.strftime("%Y-%m-%d")
-            btn = Button(text=day.strftime("%A\n%d %B"), size_hint_y=None, height=100)
-            btn.bind(on_press=lambda btn, date=date_str: self.open_day(date))
-            grid.add_widget(btn)
-        layout.add_widget(grid)
-        back_btn = Button(text="Back", size_hint_y=None, height=50)
-        back_btn.bind(on_press=lambda *_: setattr(self.manager, 'current', 'calendar'))
-        layout.add_widget(back_btn)
+    def show_month(self, year, month):
+        self.clear_widgets()
+        layout = GridLayout(cols=7, spacing=5, padding=10)
+
+        # Weekday headers (Sunday first)
+        for day in ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]:
+            layout.add_widget(Label(text=day, bold=True))
+
+        # Get month calendar data
+        month_days = calendar.Calendar(firstweekday=6).monthdayscalendar(year, month)
+
+        for week in month_days:
+            for d in week:
+                if d == 0:
+                    layout.add_widget(Label(text=""))
+                else:
+                    btn = Button(text=str(d))
+
+                    # Binding click to open day view
+                    btn.bind(
+                        on_press=lambda _, day=d: (
+                            setattr(self.manager, 'current', 'day_detail'),
+                            self.manager.get_screen('day_detail').show_day(
+                                date(year, month, day).strftime("%Y-%m-%d")
+                            )
+                        )
+                    )
+                    layout.add_widget(btn)
+
+        
+        back_btn = Button(text = "Back")
+        back_btn.bind(on_press = lambda _:setattr(self.manager, 'current', 'calendar'))
+        back_button_layout = GridLayout(cols=1, spacing=5, padding=10)
+        back_button_layout.add_widget(back_btn)
+        layout.add_widget(back_button_layout)
         self.add_widget(layout)
 
 class DayEventExpansion(Screen):
