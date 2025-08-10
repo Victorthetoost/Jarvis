@@ -1,1 +1,3 @@
-event_date_end,event_date_start,event_location,important_details,people_attending,start_time,event_name,end_time
+event_date_end,people_attending  ,event_name,event_location,event_date_start,important_details,end_time,start_time,people_attending
+2023-10-10,  ,Mom's dance lesson,,2023-10-10,Training session,15:00,12:00,
+2023-10-10,Hot and sunny,Test event,Newark,2023-10-10, California,,,

@@ -1594,3 +1594,47 @@ Here are some sources for verification:
 3. World Population Review - Hawaii Population 2023: [worldpopulationreview.com](https://worldpopulationreview.com/states/hawaii-population)
 4. County of Hawaii: [hawaiicounty.gov](https://www.hawaiicounty.gov)
 5. Statistical Atlas - Demographics Overview of Hawaii: [statisticalatlas.com](https://statisticalatlas.com/state/Hawaii/Population)----FACT CHECK----[2025-08-09 19:47:56] Thanks for watching!
+[2025-08-09 19:56:31] Okay, so I had a few errors with the dates. It was not, because I deleted the transcript dates to save a few times.
+[2025-08-09 19:56:42] it was not able to tell like oh tomorrow is like you know the next day or do 2023 because that's when it was trained so
+[2025-08-09 19:56:52] I have a- I have to go to a dance recital, my mom's dance recital tomorrow. Uh, I'm just gonna go with my dad. It's gonna be hot and sunny, so probably gonna need-
+[2025-08-09 19:57:03] screen. It's going to be from 3 PM to about 7 PM. And it's going to be in Newark, Newark Mall. Also there's about a
+[2025-08-09 19:57:13] terabytes of storage on a 1 gig flash drive. Actually, I might need to fact check that. I don't know if that's true.
+--------------------
+[2025-08-09 19:57:24] Thank you.
+----FACT CHECK---- 
+----FACT CHECK---- 
+The statement "there's about a terabytes of storage on a 1 gig flash drive. I might need to fact check that. I don't know if that's true." needs fact-checking.
+
+The statement "there's about a terabytes of storage on a 1 gig flash drive" is false. A gigabyte (GB) is much smaller than a terabyte (TB). Specifically, 1 terabyte is equal to 1,024 gigabytes, so it is impossible for a 1-gigabyte flash drive to hold a terabyte of data.
+
+Here are some sources for verification:
+1. Western Digital (WD) Technical Resources
+2. Samsung Memory & Storage Overview
+3. Kingston Technology Encyclopedia
+4. PCMag's "Memory and Storage" Guide
+5. Seagate Technology Glossary
+----FACT CHECK END----
+----FACT CHECK END----
+[2025-08-09 19:57:34] Thanks for watching!
+[2025-08-09 19:57:45] It didn't get destroyed. Um... Alright.
+[2025-08-09 19:57:55] Okay, so flash check works. Let's see if it made the date correctly.
+[2025-08-09 19:58:06] 8, 10, after... oh my god, it works! It works, alright, now let's see... It still records without me!
+[2025-08-09 19:58:16] This is beautiful. Alright, I'm gonna stop transcribing now after I do this. I just wanna make sure it does.
+--------------------
+[2025-08-09 19:58:27] record uh records and stuff and like use the thing when it's like you know
+----FACT CHECK---- 
+----FACT CHECK---- 
+The statement that needs fact-checking is "there's about a terabytes of storage on a 1 gig flash drive."
+
+The statement "there's about a terabytes of storage on a 1 gig flash drive" is false because a gigabyte (GB) is much smaller than a terabyte (TB). Specifically, 1 terabyte is equal to 1,024 gigabytes, making it impossible for a 1-gigabyte flash drive to hold a terabyte of data.
+
+Here are some sources for verification:
+1. Western Digital (WD) Technical Resources
+2. Samsung Memory & Storage Overview
+3. Kingston Technology Encyclopedia
+4. PCMag's "Memory and Storage" Guide
+5. Seagate Technology Glossary
+----FACT CHECK END----
+----FACT CHECK END----
+[2025-08-09 19:58:37] make events when they don't exist and stuff like that. Okay, okay.
+[2025-08-09 19:58:48] Oh, oh no. It put so many factors and stuff on that. Okay, well let me um...
