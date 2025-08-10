@@ -34,7 +34,7 @@ def transcribe_to_csv(database):
             "uhm", "uh-huh", "yeah", "yep", "yes", "no", "nah", "nope","thanks for watching",
             "thanks for watching","thanks for watching",
             "right?", "isn't it?", "don't you think?", "you know what I mean?", "hello",
-            "hi", "hey", "how are you?", "how's it going?", "how's everything?", "how's life?",
+            "hi", "how are you?", "how's it going?", "how's everything?", "how's life?",
             "whats up?", "what's going on?", "what's new?", "what's happening?",
             "what's good?", "what's up with you?", "what's up with that?", "what's up with this?",
             "what's up with everything?", "what's up with life?", "what's up with the world?", "watching"
@@ -110,9 +110,18 @@ def transcribe_to_csv(database):
             ]
         )
         csv_content = response.choices[0].message.content
-
+        fact_check = openai.chat.completions.create(
+            model = "gpt-4o"
+            message = [
+                {"role": "system","content": "you are a fact checking reporter who fact checks statements, and gives sources that either support or refure the statement"}
+                {"role": "user","content": "if there is a \"fact check\" or anythign similar (ie, no way thats true, i dont believe that etc...) in this text: \n " + transcript +
+                 "\n then please find the statement that needs fact checking and please return some text like: \" the statement \"\( pate the statement here\)\" is true/false because ______ and here are the sources\" \n"
+                 " and then please list 2-5 sources from varied places (if its a political issue it will get both sides, provided both are factual)"}
+            ]
+        )
+        fact_check_response = fact_check.choices[0].message.content
+        
         #saves to csv file for later use.
-        timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H")
 
         filename = temp_csv
 

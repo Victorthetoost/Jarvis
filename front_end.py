@@ -91,6 +91,7 @@ class TranscriberScreen(Screen):
         btn_start.bind(on_press = start_external_script)
         button_layout.add_widget(btn_start)
 
+
         layout.add_widget(button_layout)
 
         self.add_widget(layout)
