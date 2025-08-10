@@ -13,6 +13,8 @@ import subprocess
 from kivy.clock import Clock
 from kivy.uix.textinput import TextInput
 import os
+from dateutil.relativedelta import relativedelta
+from datetime import date
 
 APPROVAL_CSV = "pending_events.csv"
 CALENDAR_CSV = "events.csv"
@@ -185,7 +187,42 @@ class CalendarScreen(Screen):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         layout = BoxLayout(orientation='vertical', padding=10, spacing=10)
-        grid = GridLayout(cols=2, spacing=10, size_hint_y=0.8)
+        grid = GridLayout(cols=7, spacing=10, size_hint_y=0.8)
+        today = datetime.today()
+        for i in range(21):
+            day = today + timedelta(days=i)
+            date_str = day.strftime("%Y-%m-%d")
+            btn = Button(text=day.strftime("%A\n%d %B"), size_hint_y=None, height=100)
+            btn.bind(on_press=lambda btn, date=date_str: self.open_day(date))
+            grid.add_widget(btn)
+        grid_month = GridLayout(cols=4, spacing=10,size_hint_y=0.8)
+        today = date.today()
+        for i in range(12):  # 0 through 11 = 12 months
+            month = today + relativedelta(months=i)
+            date_str = month.strftime("%Y-%m")
+            btn = Button(
+                text=month.strftime("%B %Y"),  # e.g., "August 2025"
+                size_hint_y=None,
+                height=100
+            )
+            btn.bind(on_press=lambda _:setattr(self.manager, 'current','month_event_expansion'))
+            grid_month.add_widget(btn)
+        layout.add_widget(grid)
+        layout.add_widget(grid_month)
+        back_btn = Button(text="Back", size_hint_y=None, height=50)
+        back_btn.bind(on_press=lambda *_: setattr(self.manager, 'current', 'main'))
+        layout.add_widget(back_btn)
+        self.add_widget(layout)
+
+    def open_day(self, date):
+        self.manager.get_screen('day_detail').show_day(date)
+        self.manager.current = 'day_detail'
+
+class MonthEventExpansion(Screen):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        layout = BoxLayout(orientation='vertical', padding=10, spacing=10)
+        grid = GridLayout(cols=7, spacing=10, size_hint_y=0.8)
         today = datetime.today()
         for i in range(30):
             day = today + timedelta(days=i)
@@ -195,13 +232,9 @@ class CalendarScreen(Screen):
             grid.add_widget(btn)
         layout.add_widget(grid)
         back_btn = Button(text="Back", size_hint_y=None, height=50)
-        back_btn.bind(on_press=lambda *_: setattr(self.manager, 'current', 'main'))
+        back_btn.bind(on_press=lambda *_: setattr(self.manager, 'current', 'calendar'))
         layout.add_widget(back_btn)
         self.add_widget(layout)
-
-    def open_day(self, date):
-        self.manager.get_screen('day_detail').show_day(date)
-        self.manager.current = 'day_detail'
 
 class DayEventExpansion(Screen):
     def __init__(self, **kwargs):
@@ -309,6 +342,7 @@ class TaskApp(App):
         sm.add_widget(DayDetailScreen(name='day_detail'))
         sm.add_widget(DayEventExpansion(name = 'event_detail'))
         sm.add_widget(TranscriberScreen(name = 'transcriber'))
+        sm.add_widget(MonthEventExpansion(name = 'month_event_expansion'))
         return sm
 
 
