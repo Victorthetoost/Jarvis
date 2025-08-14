@@ -18,4 +18,9 @@ make the main calendar better. isntead of jsut showing the next 7 days, i need t
     on the month to show the weeks in the month and what you have to do there.
     thats about it
 
+-- completed -- 
+-- completed -- 
 i need ot make a button that fact checks the last 2 min of conversation and outputs it in a little text box on the live transcription screen. 
+    needs to run independent of the other program so it checks more often than the get date bs
+-- completed -- 
+-- completed -- 
