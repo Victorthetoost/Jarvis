@@ -104,7 +104,7 @@ class TranscriberScreen(Screen):
 
     def update_transcript(self, dt):
         if os.path.exists(self.transcript_file):
-            with open(self.transcript_file, "r", encoding="utf-8") as f:
+            with open(self.transcript_file, "r", encoding="utf-8", errors="replace") as f:
                 text = f.read()
                 if text != self.transcript_display.text:
                     self.transcript_display.text = text
