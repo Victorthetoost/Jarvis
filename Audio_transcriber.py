@@ -8,6 +8,14 @@ import whisper
 import datetime
 import time
 import transcription_to_csv
+import datetime
+import re
+import itertools
+import os
+import openai
+from openai import OpenAI
+from dotenv import load_dotenv, find_dotenv
+import datetime
 
 # Load Whisper model
 model = whisper.load_model("medium")
@@ -31,6 +39,25 @@ def record_audio():
             traceback.print_exc()
     print("Recording stopped.")
 
+def check_fact(transcript):
+    if len(transcript) > 5:
+    
+        _ = load_dotenv(find_dotenv())
+        client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))      
+        temperature = 0.3
+        fact_check = openai.chat.completions.create(
+            model = "gpt-4o",
+            messages=[
+                {"role": "system","content": "you are a fact checking reporter who fact checks statements, and gives sources that either support or refure the statement"},
+                {"role": "user","content": "if there is a \"fact check\" or anythign similar (ie, no way thats true, i dont believe that etc...) in this text: \n " + transcript +
+                 "\n then please find the statement that needs fact checking and please return some text like: \" the statement \"( pate the statement here)\" is true/false because ______ and here are the sources\" \n"
+                 " and then please list 2-5 sources from varied places (if its a political issue it will get both sides, provided both are factual) do not include links, just the names. also IGNORE EVYERHTIN INBETWEEN ----FACT CHECK---- AND ----FACT CHECK END----, IGNORE ALL OFTHAT"}
+            ]
+        )
+        fact_check_response = fact_check.choices[0].message.content    
+        with open("Transcript.txt","a") as f:
+            f.write(f"----FACT CHECK---- \n----FACT CHECK---- \n" + fact_check_response + "\n----FACT CHECK END----\n----FACT CHECK END----\n")
+        #saves to csv file for later use.      
 
 def transcribe_audio():
     print("Transcription started...")
@@ -45,6 +72,8 @@ def transcribe_audio():
                 print(log_entry.strip())
                 with open(output_file, 'a') as f:
                     f.write(log_entry)
+                if "fact" or "check" or "look into" or "verify" or "is that true" in transcription.lower():
+                    check_fact(log_entry.strip())
         except queue.Empty:
             continue
         except Exception as e:
