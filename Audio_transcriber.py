@@ -59,7 +59,9 @@ def check_fact(transcript):
             f.write(f"----FACT CHECK---- \n----FACT CHECK---- \n" + fact_check_response + "\n----FACT CHECK END----\n----FACT CHECK END----\n")
         #saves to csv file for later use.      
 
+
 def transcribe_audio():
+    fact_check_word_list = ["fact","check","look into","verify","is that true"]
     print("Transcription started...")
     while not stop_event.is_set() or not audio_queue.empty():
         try:
@@ -72,7 +74,7 @@ def transcribe_audio():
                 print(log_entry.strip())
                 with open(output_file, 'a') as f:
                     f.write(log_entry)
-                if "fact" or "check" or "look into" or "verify" or "is that true" in transcription.lower():
+                if fact_check_word_list in transcription.lower():
                     check_fact(log_entry.strip())
         except queue.Empty:
             continue
