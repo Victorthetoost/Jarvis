@@ -61,7 +61,6 @@ def check_fact(transcript):
 
 
 def transcribe_audio():
-    fact_check_word_list = ["fact","check","look into","verify","is that true"]
     print("Transcription started...")
     while not stop_event.is_set() or not audio_queue.empty():
         try:
@@ -74,8 +73,11 @@ def transcribe_audio():
                 print(log_entry.strip())
                 with open(output_file, 'a') as f:
                     f.write(log_entry)
-                if fact_check_word_list in transcription.lower():
-                    check_fact(log_entry.strip())
+
+                if "fact check" in transcription.lower() or "check that" in transcription.lower() or "is that true" in transcription.lower() or "are you sure" in transcription.lower():
+                    print("Fact check trigger detected. Initiating fact check...")
+                    check_fact(transcription)
+   
         except queue.Empty:
             continue
         except Exception as e:
