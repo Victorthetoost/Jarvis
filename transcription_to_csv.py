@@ -104,24 +104,27 @@ def transcribe_to_csv(database):
                 {"role": "user", "content": "Extract all events from this transcript: \n" + transcript + 
                 "\n and return it as a csv file formatted like this: \n" + variables + "\n" +
                 "the variables must be an exact match and they have to be set as labels for the csv. do not write anything like: csv:... just the variables for the column names and the appointments"+
-                "give just the csv, no filler text, with the dates being formatted as numbers like this: year-month-day (assume current year month and day unless otherwise specified) and times being formatted as hour:min. also IGNORE EVYERHTIN INBETWEEN ----FACT CHECK---- AND ----FACT CHECK END----, IGNORE ALL OFTHAT.\n"}
+                "give just the csv, no filler text, with the dates being formatted as numbers like this:\n"+
+                "year-month-day (assume current year month and day unless otherwise specified) and times being formatted as hour:min. also IGNORE EVYERHTIN INBETWEEN ----FACT CHECK---- AND ----FACT CHECK END----, IGNORE ALL OFTHAT.\n"+
+                "If there are no events, just return the header line with no data rows. make sure its 100 percent an event and not a fact check or anything else"+
+                "it could be homework assignments, meetings, birthdays, anniversaries, reminders, anything that needs to be scheduled. an event has to have a reason to exist and time/date, place to meet, or both"}
             ]
         )
         csv_content = response.choices[0].message.content
-        fact_check = openai.chat.completions.create(
-            model = "gpt-4o",
-            messages=[
-                {"role": "system","content": "you are a fact checking reporter who fact checks statements, and gives sources that either support or refure the statement"},
-                {"role": "user","content": "if there is a \"fact check\" or anythign similar (ie, no way thats true, i dont believe that etc...) in this text: \n " + transcript +
-                 "\n then please find the statement that needs fact checking and please return some text like: \" the statement \"( pate the statement here)\" is true/false because ______ and here are the sources\" \n"
-                 " and then please list 2-5 sources from varied places (if its a political issue it will get both sides, provided both are factual) do not include links, just the names. also IGNORE EVYERHTIN INBETWEEN ----FACT CHECK---- AND ----FACT CHECK END----, IGNORE ALL OFTHAT"}
-            ]
-        )
-        fact_check_response = fact_check.choices[0].message.content
-
-        with open("Transcript.txt","a") as f:
-            f.write(f"----FACT CHECK---- \n----FACT CHECK---- \n" + fact_check_response + "\n----FACT CHECK END----\n----FACT CHECK END----\n")
-        #saves to csv file for later use.
+        #fact_check = openai.chat.completions.create(
+        #    model = "gpt-4o",
+        #    messages=[
+        #        {"role": "system","content": "you are a fact checking reporter who fact checks statements, and gives sources that either support or refure the statement"},
+        #        {"role": "user","content": "if there is a \"fact check\" or anythign similar (ie, no way thats true, i dont believe that etc...) in this text: \n " + transcript +
+        #         "\n then please find the statement that needs fact checking and please return some text like: \" the statement \"( pate the statement here)\" is true/false because ______ and here are the sources\" \n"
+        #         " and then please list 2-5 sources from varied places (if its a political issue it will get both sides, provided both are factual) do not include links, just the names. also IGNORE EVYERHTIN INBETWEEN ----FACT CHECK---- AND ----FACT CHECK END----, IGNORE ALL OFTHAT"}
+        #    ]
+        #)
+        #fact_check_response = fact_check.choices[0].message.content
+#
+        #with open("Transcript.txt","a") as f:
+        #    f.write(f"----FACT CHECK---- \n----FACT CHECK---- \n" + fact_check_response + "\n----FACT CHECK END----\n----FACT CHECK END----\n")
+        ##saves to csv file for later use.
 
         filename = temp_csv
 
