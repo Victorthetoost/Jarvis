@@ -105,7 +105,8 @@ def transcribe_to_csv(database):
                 "\n and return it as a csv file formatted like this: \n" + variables + "\n" +
                 "the variables must be an exact match and they have to be set as labels for the csv. do not write anything like: csv:... just the variables for the column names and the appointments"+
                 "give just the csv, no filler text, with the dates being formatted as numbers like this:\n"+
-                "year-month-day (assume current year month and day unless otherwise specified) and times being formatted as hour:min. also IGNORE EVYERHTIN INBETWEEN ----FACT CHECK---- AND ----FACT CHECK END----, IGNORE ALL OFTHAT.\n"+
+                "year-month-day (assume current year month and day according to the transcript unless otherwise specified) and times being formatted as hour:min. if it says \"next wednesday\" or \"tommorow\" or anything like that, base it off of the transcript timestamp"+
+                "also IGNORE EVYERHTIN INBETWEEN ----FACT CHECK---- AND ----FACT CHECK END----, IGNORE ALL OFTHAT.\n"+
                 "If there are no events, just return the header line with no data rows. make sure its 100 percent an event and not a fact check or anything else"+
                 "it could be homework assignments, meetings, birthdays, anniversaries, reminders, anything that needs to be scheduled. an event has to have a reason to exist and time/date, place to meet, or both"}
             ]
