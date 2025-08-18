@@ -1845,3 +1845,55 @@ Sources:
 [2025-08-17 15:18:56] Yeah, okay.
 [2025-08-17 15:19:07] Let's see pending events.
 [2025-08-17 15:19:17] Thanks for watching!
+[2025-08-17 15:25:09] Alright, so let's see if this works a little bit better. This should prevent it from skipping lines whenever, you know...
+[2025-08-17 15:25:20] It records more of what I'm talking about. So let's do another test. So I have an appointment to-
+[2025-08-17 15:25:30] at 3pm, it's gonna be at the doctor's office in Fremont, California. I'm gonna be getting a tooth pulled, so that's gonna be...
+[2025-08-17 15:25:41] Uh, a little bit annoying. So, uh, let's see.
+[2025-08-17 15:25:51] Okay, so I don't think it's skipping that much, let's see.
+----FACT CHECK---- 
+----FACT CHECK---- 
+There is no specific statement in the text provided that requires fact-checking. The text seems to be referring to a future task or process of fact-checking, rather than making a factual claim itself. If you have a particular statement that you believe needs to be fact-checked, please provide it directly.
+----FACT CHECK END----
+----FACT CHECK END----
+----FACT CHECK---- 
+----FACT CHECK---- 
+Sure, I can help with that. Please provide the text and indicate which statement needs fact-checking.
+----FACT CHECK END----
+----FACT CHECK END----
+[2025-08-17 15:26:02] I just gotta remember what I say. Um, Mary had a little lamb. Mary had a little lamb. Mary had a little lamb whose fur was white as snow.
+[2025-08-17 15:26:12] Thanks for watching!
+[2025-08-17 15:26:23] Okay, so I got that big thing. Um... Okay, I also need to check the fact checking thing, so...
+[2025-08-17 15:26:33] I heard that there's 150 billion watermelons on planet Earth, but I think that's wrong.
+[2025-08-17 15:26:44] So I'm gonna have to fact check that.
+[2025-08-17 15:29:18] Alright, so now that it's recording, let's see how well it does this. So I heard that there's a hundred
+[2025-08-17 15:29:29] million people in Alaska right now but I'm gonna have to fact check that I think that's wrong.
+----FACT CHECK---- 
+----FACT CHECK---- 
+----FACT CHECK----
+
+the population of alaska cannot be a million , right? i mean its not that big
+
+----FACT CHECK END----
+
+The statement "million people in Alaska right now" needs fact-checking.
+
+"The statement 'million people in Alaska right now' is false because the population of Alaska is less than one million. According to the U.S. Census Bureau, the estimated population of Alaska was approximately 730,000 as of 2020. More recent estimates suggest it remains under a million."
+
+Here are the sources that support this information:
+
+1. U.S. Census Bureau - Population Estimates
+2. Alaska Department of Labor and Workforce Development
+3. World Population Review - Alaska Population 2023
+----FACT CHECK END----
+----FACT CHECK END----
+[2025-08-17 15:29:39] Let's see if it gets the...
+[2025-08-17 15:29:50] 150 so it's like one word so it's really not that bad but I think oh and
+[2025-08-17 15:30:00] Um, yeah, so I think that it's...
+[2025-08-17 15:31:00] Alright, so I think I fixed it. I went back to the older version because it's like, it cuts off short but
+[2025-08-17 15:31:10] It's not that bad, I guess. It cuts off, but it's not the end of the world.
+[2025-08-17 15:31:21] And everything else works, so yeah, I'll see how that goes.
+[2025-08-17 15:31:31] So I have an appointment, a doctor's appointment at 3pm tomorrow at the doctor's office in Fremont, California. I'm gonna be getting a tooth...
+[2025-08-17 15:31:42] I should probably show up a bit early, and yeah, it's just me going out, I think I'm gonna be going with family.
+--------------------
+[2025-08-17 15:31:52] Thanks for watching!
+[2025-08-17 15:32:03] See ya. Ayyyy. So I'm down there 18, doctors appointment.

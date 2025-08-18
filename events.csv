@@ -1,3 +1,4 @@
-event_date_end,people_attending  ,event_name,event_location,event_date_start,important_details,end_time,start_time,people_attending
-2023-10-10,  ,Mom's dance lesson,,2023-10-10,Training session,15:00,12:00,
-2023-10-10,Hot and sunny,Test event,Newark,2023-10-10, California,,,
+people_attending,event_location,start_time,event_date_end,event_date_start,important_details,end_time,event_name,people_attending  
+,,12:00,2023-10-10,2023-10-10,Training session,15:00,Mom's dance lesson,  
+,Newark,,2023-10-10,2023-10-10, California,,Test event,Hot and sunny
+To get a tooth pulled,Fremont,15:00,,2025-08-18, California,,Doctor's Appointment,
