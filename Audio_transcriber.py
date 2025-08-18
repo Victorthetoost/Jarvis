@@ -25,15 +25,27 @@ chunk_duration = 10  # seconds per chunk
 audio_queue = queue.Queue()
 stop_event = threading.Event()
 output_file = "Transcript.txt"
+overlap = 1  # seconds to overlap
 
 def record_audio():
     print("Recording started...")
+    last_audio = None
+    last_timestamp = None
     while not stop_event.is_set():
         try:
             recording = sd.rec(int(chunk_duration * samplerate), samplerate=samplerate, channels=1, dtype='float32')
             sd.wait()
             timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            audio_queue.put((recording.copy(), timestamp))
+            # If you want to overlap, combine the last second of the previous chunk with the current
+            if last_audio is not None:
+                overlap_samples = int(overlap * samplerate)
+                # Concatenate last part of last_audio with the current recording
+                combined = np.concatenate((last_audio[-overlap_samples:], recording.flatten()))
+                audio_queue.put((combined.copy(), timestamp))
+            else:
+                audio_queue.put((recording.copy(), timestamp))
+            last_audio = recording.flatten()
+            last_timestamp = timestamp
         except Exception as e:
             print("Error in record_audio:", e)
             traceback.print_exc()
@@ -103,7 +115,7 @@ def main():
     print("Recording and transcription are running. Press Ctrl+C to stop.")
     try:
         while True:
-            time.sleep(0.5)
+            time.sleep(1)
     except KeyboardInterrupt:
         print("Stopping...")
         stop_event.set()
