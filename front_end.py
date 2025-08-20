@@ -316,8 +316,8 @@ class ManualEntryScreen(Screen):
             important_details = self.input_details.text.strip()
             people_attending = self.input_people.text.strip()
 
-            if not all([event_details, event_date_start, event_date_end, start_time, end_time, event_location, important_details, people_attending]):
-                print("Please fill in all fields.")
+            if not all([event_details, event_date_start):
+                print("Please fill in THE IMPORANTT fields.")
                 return
 
             new_event = {
