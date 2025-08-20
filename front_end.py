@@ -129,9 +129,15 @@ class MainScreen(Screen):
         nav.add_widget(btn_calendar)
         self.layout.add_widget(nav)
 
-        btn_start_rec = Button(text = "Transcriber")
-        btn_start_rec.bind(on_press = lambda _: setattr(self.manager, 'current', 'transcriber'))
-        nav.add_widget(btn_start_rec)
+        btn_open_transcribe = Button(text = "Transcriber")
+        btn_open_transcribe.bind(on_press = lambda _: setattr(self.manager, 'current', 'transcriber'))
+        nav.add_widget(btn_open_transcribe)
+
+        btn_manual_entry = Button(text="Manual Entry")
+        btn_manual_entry.bind(on_press=lambda _: setattr(self.manager, 'current', 'manual_entry'))
+        nav_2 = BoxLayout(size_hint_y=None, height=50)
+        nav_2.add_widget(btn_manual_entry)
+        nav.add_widget(nav_2)
 
         
 
@@ -266,6 +272,81 @@ class MonthEventExpansion(Screen):
         layout.add_widget(back_button_layout)
         self.add_widget(layout)
 
+class ManualEntryScreen(Screen):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.layout = BoxLayout(orientation='vertical', padding=20, spacing=10)
+
+        self.input = TextInput(hint_text="Enter event name", size_hint_y=None, height=200)
+        self.layout.add_widget(self.input)
+        self.input_date_start = TextInput(hint_text="Enter event start date (YYYY-MM-DD)", size_hint_y=None, height=50)
+        self.layout.add_widget(self.input_date_start)
+        self.input_date_end = TextInput(hint_text="Enter event end date (YYYY-MM-DD)", size_hint_y=None, height=50)
+        self.layout.add_widget(self.input_date_end)
+        self.input_time_start = TextInput(hint_text="Enter event start time (HH:MM)", size_hint_y=None, height=50)
+        self.layout.add_widget(self.input_time_start)
+        self.input_time_end = TextInput(hint_text="Enter event end time (HH:MM)", size_hint_y=None, height=50)
+        self.layout.add_widget(self.input_time_end)
+        self.input_location = TextInput(hint_text="Enter event location", size_hint_y=None, height=50)
+        self.layout.add_widget(self.input_location)
+        self.input_details = TextInput(hint_text="Enter important details", size_hint_y=None, height=100)
+        self.layout.add_widget(self.input_details)
+        self.input_people = TextInput(hint_text="Enter people attending (comma separated)", size_hint_y=None, height=50)
+        self.layout.add_widget(self.input_people)
+
+
+        submit_btn = Button(text="Submit", size_hint_y=None, height=40)
+        submit_btn.bind(on_press=self.submit_event)
+        self.layout.add_widget(submit_btn)
+
+        back_btn = Button(text="Back", size_hint_y=None, height=40)
+        back_btn.bind(on_press=lambda _: setattr(self.manager, 'current', 'main'))
+        self.layout.add_widget(back_btn)
+
+        self.add_widget(self.layout)
+
+    def submit_event(self, instance):
+        event_details = self.input.text.strip()
+        if event_details:
+            event_date_start = self.input_date_start.text.strip()
+            event_date_end = self.input_date_end.text.strip()
+            start_time = self.input_time_start.text.strip()
+            end_time = self.input_time_end.text.strip()
+            event_location = self.input_location.text.strip()
+            important_details = self.input_details.text.strip()
+            people_attending = self.input_people.text.strip()
+
+            if not all([event_details, event_date_start, event_date_end, start_time, end_time, event_location, important_details, people_attending]):
+                print("Please fill in all fields.")
+                return
+
+            new_event = {
+                "event_name": event_details,
+                "event_date_start": event_date_start,
+                "event_date_end": event_date_end,
+                "start_time": start_time,
+                "end_time": end_time,
+                "event_location": event_location,
+                "important_details": important_details,
+                "people_attending": people_attending
+            }
+
+            # Save to CSV
+            events = load_csv(APPROVAL_CSV)
+            events.append(new_event)
+            save_csv(APPROVAL_CSV, events)
+
+            # Clear inputs
+            self.input.text = ""
+            self.input_date_start.text = ""
+            self.input_date_end.text = ""
+            self.input_time_start.text = ""
+            self.input_time_end.text = ""
+            self.input_location.text = ""
+            self.input_details.text = ""
+            self.input_people.text = ""
+            
+
 class DayEventExpansion(Screen):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -373,6 +454,7 @@ class TaskApp(App):
         sm.add_widget(DayEventExpansion(name = 'event_detail'))
         sm.add_widget(TranscriberScreen(name = 'transcriber'))
         sm.add_widget(MonthEventExpansion(name = 'month_event_expansion'))
+        sm.add_widget(ManualEntryScreen(name='manual_entry'))
         return sm
 
 
