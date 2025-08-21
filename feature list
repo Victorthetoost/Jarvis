@@ -1,26 +1,32 @@
-add another thread that checks for audio commands like "fact check that" which asks chatgpt to fact check the statement.
-add another feature called clip that, whcih saves the last 2 min of audio with the date and time and it's own transcription
-    make a front end feature that makes it so that you can look up if someone said that
-figure out who is talking and when, and label that in real time so that its easier to tell what is going on. 
 
-make a button that when pressed opens up a weekly schedule, where you can input your classes and the times at which they are supposed to be,
+-add another feature called clip that, whcih saves the last 2 min of audio with the date and time and it's own transcription
+    make a front end feature that makes it so that you can look up if someone said that
+-figure out who is talking and when, and label that in real time so that its easier to tell what is going on. 
+
+--make a button that when pressed opens up a weekly schedule, where you can input your classes and the times at which they are supposed to be,
     and then the program records everything in those time slots, parses it for events and then makes detailed notes about what you learned and what you shoudl study
     aswell as any homewokr assignments or anythign like that. 
 
-for the main page make a calendar/list of things to do and have the floating text stuff just be the backround.
+-for the main page make a calendar/list of things to do and have the floating text stuff just be the backround.
     start with just the calendar and/or list of to-do items as that is the most important. 
 
-have the gps data, and find out where everything is. so if it says "event at newark mall etc" then it will find the average time from home to that place,
+-have the gps data, and find out where everything is. so if it says "event at newark mall etc" then it will find the average time from home to that place,
     and also the time it will take to drive from current location. it will also give a "leave by" time which is travel time -5 min
 
-make the main calendar better. isntead of jsut showing the next 7 days, i need to make it so that it can show hte next months aswell.
+
+
+-- completed -- 
+-- completed -- 
+-i need ot make a button that fact checks the last 2 min of conversation and outputs it in a little text box on the live transcription screen. 
+    needs to run independent of the other program so it checks more often than the get date bs
+
+-add another thread that checks for audio commands like "fact check that" which asks chatgpt to fact check the statement.
+
+-manual addition of events
+
+-make the main calendar better. isntead of jsut showing the next 7 days, i need to make it so that it can show hte next months aswell.
     basically the main screen will be the next 30 days or so, and then you can click on a button that shows the number of tasks per month, and then you can click
     on the month to show the weeks in the month and what you have to do there.
     thats about it
-
--- completed -- 
--- completed -- 
-i need ot make a button that fact checks the last 2 min of conversation and outputs it in a little text box on the live transcription screen. 
-    needs to run independent of the other program so it checks more often than the get date bs
 -- completed -- 
 -- completed -- 
