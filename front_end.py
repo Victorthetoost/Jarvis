@@ -316,7 +316,7 @@ class ManualEntryScreen(Screen):
             important_details = self.input_details.text.strip()
             people_attending = self.input_people.text.strip()
 
-            if not all([event_details, event_date_start):
+            if not all([event_details, event_date_start]):
                 print("Please fill in THE IMPORANTT fields.")
                 return
 
@@ -328,7 +328,7 @@ class ManualEntryScreen(Screen):
                 "end_time": end_time,
                 "event_location": event_location,
                 "important_details": important_details,
-                "people_attending": people_attending
+                "people_attending": people_attending,
             }
 
             # Save to CSV

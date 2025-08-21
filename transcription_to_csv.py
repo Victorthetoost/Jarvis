@@ -108,7 +108,8 @@ def transcribe_to_csv(database):
                 "year-month-day (assume current year month and day according to the transcript unless otherwise specified) and times being formatted as hour:min. if it says \"next wednesday\" or \"tommorow\" or anything like that, base it off of the transcript timestamp"+
                 "also IGNORE EVYERHTIN INBETWEEN ----FACT CHECK---- AND ----FACT CHECK END----, IGNORE ALL OFTHAT.\n"+
                 "If there are no events, just return the header line with no data rows. make sure its 100 percent an event and not a fact check or anything else"+
-                "it could be homework assignments, meetings, birthdays, anniversaries, reminders, anything that needs to be scheduled. an event has to have a reason to exist and time/date, place to meet, or both"}
+                "it could be homework assignments, meetings, birthdays, anniversaries, reminders, anything that needs to be scheduled. an event has to have a reason"+
+                 "to exist and time/date, place to meet, or both. Also do not include the header line for the csv, just the data rows. so no repeats of the \"event_name...\" etc"}
             ]
         )
         csv_content = response.choices[0].message.content
