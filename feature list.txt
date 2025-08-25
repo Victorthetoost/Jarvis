@@ -18,7 +18,16 @@
 
 - make a to-do list page
 
+- summarize
+    basically when said at the end of a busy talking part (means that there si very little time between lines and the lines are very long)
+    it will summarize everything said in the busy talking part (even between render lines)
+- "save that"
+    saves the text conversation for later viewing
+
 - make it identify anything that can be used as a to-do list and add it to a to-do list on the front page.
+
+- make the expansion day better by having it shown as blocks with the time of each event blocked out on the thing to make it easier to see when each event starts and ends.
+    for envents that are multiple days it shows it in the expanded version
 
 -- completed -- 
 -- completed -- 
