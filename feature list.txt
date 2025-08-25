@@ -1,6 +1,7 @@
 
--add another feature called clip that, whcih saves the last 2 min of audio with the date and time and it's own transcription
+-add another feature called "clip that", whcih saves the last 2 min of audio with the date and time and it's own transcription
     make a front end feature that makes it so that you can look up if someone said that
+
 -figure out who is talking and when, and label that in real time so that its easier to tell what is going on. 
 
 --make a button that when pressed opens up a weekly schedule, where you can input your classes and the times at which they are supposed to be,
@@ -13,7 +14,11 @@
 -have the gps data, and find out where everything is. so if it says "event at newark mall etc" then it will find the average time from home to that place,
     and also the time it will take to drive from current location. it will also give a "leave by" time which is travel time -5 min
 
+- make it send notifications to phone and then maybe even to computer
 
+- make a to-do list page
+
+- make it identify anything that can be used as a to-do list and add it to a to-do list on the front page.
 
 -- completed -- 
 -- completed -- 
