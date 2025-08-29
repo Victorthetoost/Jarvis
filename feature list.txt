@@ -1,3 +1,7 @@
+1) make the block thing in the schedule
+2) make it so that you can put weekly schedule thing
+
+
 
 -add another feature called "clip that", whcih saves the last 2 min of audio with the date and time and it's own transcription
     make a front end feature that makes it so that you can look up if someone said that
@@ -17,6 +21,8 @@
 - make it send notifications to phone and then maybe even to computer
 
 - make a to-do list page
+
+- make it chekc for internet connectivity before running the chatgpt calls, if no internet is foudn it gonna make a backlog que fo things to do
 
 - summarize
     basically when said at the end of a busy talking part (means that there si very little time between lines and the lines are very long)

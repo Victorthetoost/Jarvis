@@ -1,3 +1,4 @@
+import kivy
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import ScreenManager, Screen
@@ -348,6 +349,7 @@ class ManualEntryScreen(Screen):
             
 
 class DayEventExpansion(Screen):
+
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.layout = BoxLayout(orientation='vertical', padding=20, spacing=10)
@@ -377,11 +379,12 @@ class DayEventExpansion(Screen):
 
 
 class DayDetailScreen(Screen):
+    #i need to make a part that adds the blocks so that its easier to see when something is filled up
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
         layout = BoxLayout(orientation='vertical', spacing=10, padding=20)
-
+        
         self.title = Label(text="Events on [date]", size_hint_y=None, height=40)
         layout.add_widget(self.title)
 
@@ -415,6 +418,10 @@ class DayDetailScreen(Screen):
         todays_events = [e for e in events if e['event_date_start'] == date_key]
     
         for event in todays_events:
+            event_duration = datetime.strptime(event['end_time'], "%H:%M") - datetime.strptime(event['start_time'], "%H:%M")
+            if event_duration <= timedelta(0):
+                event_duration = timedelta(hours=1)
+            height = max(60, event_duration.hours * 60)  # Minimum height of 60
             row = BoxLayout(orientation='horizontal', size_hint_y=None, height=60, spacing=5)
     
             # Delete button
