@@ -18,7 +18,7 @@ from dotenv import load_dotenv, find_dotenv
 import datetime
 
 # Load Whisper model
-model = whisper.load_model("medium")
+model = whisper.load_model("large")
 stop = False
 samplerate = 8000  # 8kHz sample rate
 chunk_duration = 10  # seconds per chunk

@@ -37,7 +37,12 @@ def transcribe_to_csv(database):
             "hi", "how are you?", "how's it going?", "how's everything?", "how's life?",
             "whats up?", "what's going on?", "what's new?", "what's happening?",
             "what's good?", "what's up with you?", "what's up with that?", "what's up with this?",
-            "what's up with everything?", "what's up with life?", "what's up with the world?", "watching"
+            "what's up with everything?", "what's up with life?", "what's up with the world?", "watching", "thank you.","Thank You.",
+            "thank you so much","Thank you so much","thanks for listening",
+            "Thanks for listening","thanks for listening.","Thanks for listening.","thanks for watching",
+            "Thanks for watching","thanks for watching."
+            "Thanks for watching.",
+
         ]
 
         # Sort by length to match longer phrases first
@@ -107,12 +112,13 @@ def transcribe_to_csv(database):
                 "give just the csv, no filler text, with the dates being formatted as numbers like this:\n"+
                 "year-month-day (assume current year month and day according to the transcript unless otherwise specified) and times being formatted as hour:min. if it says \"next wednesday\" or \"tommorow\" or anything like that, base it off of the transcript timestamp"+
                 "also IGNORE EVYERHTIN INBETWEEN ----FACT CHECK---- AND ----FACT CHECK END----, IGNORE ALL OFTHAT.\n"+
-                "If there are no events, just return the header line with no data rows. make sure its 100 percent an event and not a fact check or anything else"+
+                "If there are no events, return THIS EXACT MESSAGE AND NOTHING ELSE: \"NO EVENTS\". make sure its 100 percent an event and not a fact check or anything else"+
                 "it could be homework assignments, meetings, birthdays, anniversaries, reminders, anything that needs to be scheduled. an event has to have a reason"+
-                 "to exist and time/date, place to meet, or both. Also do not include the header line for the csv, just the data rows. so no repeats of the \"event_name...\" etc"}
+                 "to exist and time/date, place to meet, or both. Also do not include the header line for the csv, just the data rows. so no repeats of the \"event_name...\" etc\n"}
             ]
         )
         csv_content = response.choices[0].message.content
+        
         #fact_check = openai.chat.completions.create(
         #    model = "gpt-4o",
         #    messages=[
@@ -127,33 +133,35 @@ def transcribe_to_csv(database):
         #with open("Transcript.txt","a") as f:
         #    f.write(f"----FACT CHECK---- \n----FACT CHECK---- \n" + fact_check_response + "\n----FACT CHECK END----\n----FACT CHECK END----\n")
         ##saves to csv file for later use.
-
-        filename = temp_csv
-
-        with open(temp_csv, 'a', encoding='utf-8') as f:
-            f.write(csv_content)
-
-        print(f"CSV saved as: {filename}")
-        os.remove(cleaned_file_name)
-
-        def clean_csv(filename):
+        if csv_content.strip() == "NO EVENTS":
+            print("No events found in the transcript.")
+        else:
+            filename = temp_csv
+    
+            with open(temp_csv, 'a', encoding='utf-8') as f:
+                f.write(csv_content)
+    
+            print(f"CSV saved as: {filename}")
+            os.remove(cleaned_file_name)
+    
+            def clean_csv(filename):
+                with open(filename, "r", encoding="utf-8") as f:
+                    lines = f.readlines()
+                # Remove first and last lines 
+                lines = lines[1:-1]
+                with open(filename, "w", encoding="utf-8") as f:
+                    f.writelines(lines)
+    
             with open(filename, "r", encoding="utf-8") as f:
-                lines = f.readlines()
-            # Remove first and last lines 
-            lines = lines[1:-1]
-            with open(filename, "w", encoding="utf-8") as f:
-                f.writelines(lines)
-
-        with open(filename, "r", encoding="utf-8") as f:
-            first_line = f.readline().strip()
-            print(f"First line: {first_line.strip()}")
-            if not (variables in first_line):
-                print("First line is not correct, cleaning CSV...")
-                clean_csv(filename)
-
-        import pandas as pd
-        data = pd.read_csv(filename)
-        data.head()
+                first_line = f.readline().strip()
+                print(f"First line: {first_line.strip()}")
+                if not (variables in first_line):
+                    print("First line is not correct, cleaning CSV...")
+                    clean_csv(filename)
+    
+            import pandas as pd
+            data = pd.read_csv(filename)
+            data.head()
     else:
         print("No transcription available to process.")
         os.remove(cleaned_file_name)
