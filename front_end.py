@@ -410,18 +410,27 @@ class DayDetailScreen(Screen):
         try:
             parsed_date = datetime.strptime(day_str, "%Y-%m-%d")
             date_key = parsed_date.replace(year=datetime.today().year).strftime("%Y-%m-%d")
+            print("Parsed date:", date_key)
         except:
             self.events_grid.add_widget(Label(text="Date parse error"))
             return
     
         events = load_csv(CALENDAR_CSV)
         todays_events = [e for e in events if e['event_date_start'] == date_key]
-    
-        for event in todays_events:
-            event_duration = datetime.strptime(event['end_time'], "%H:%M") - datetime.strptime(event['start_time'], "%H:%M")
+
+        ordered_events = sorted(todays_events, key=lambda x: x['start_time'])
+        for event in ordered_events:
+            print("Event data:", event)
+            event_start = int(event["start_time"]) 
+            event_end = int(event["end_time"])
+            #right now its saved as 19:30 for example, instead i need to save it as 19.5
+            print(event_start, event_end)
+            
+            event_duration = event_end - event_start
+            print(event_duration)
             if event_duration <= timedelta(0):
                 event_duration = timedelta(hours=1)
-            height = max(60, event_duration.hours * 60)  # Minimum height of 60
+            height = max(60, event_duration * 60)  # Minimum height of 60
             row = BoxLayout(orientation='horizontal', size_hint_y=None, height=60, spacing=5)
     
             # Delete button

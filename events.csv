@@ -1,3 +1,3 @@
-important_details,start_time,event_date_start,event_location,people_attending,end_time,event_date_end,event_name
-cake and it might be rainy,12:00,2025-08-26,Dona's house,unspecified,15:00,2025-08-26,birthday party
-cake and it might be rainy,12:00,2025-08-26,Dona's house,unspecified,15:00,2025-08-26,birthday party
+event_name,start_time,event_date_start,end_time,event_date_end,event_location,people_attending,important_details
+test,09:00,2025-09-20,10:00,2025-09-20,Office,John Doe,Weekly team meeting
+test2,11:00,2025-09-20,12:30,2025-09-20,Cafe,Jane Smith,Lunch with client
