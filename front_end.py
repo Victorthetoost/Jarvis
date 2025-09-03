@@ -424,6 +424,10 @@ class DayDetailScreen(Screen):
             event_start = int(event["start_time"]) 
             event_end = int(event["end_time"])
             #right now its saved as 19:30 for example, instead i need to save it as 19.5
+            #right now its saved as 19:30 for example, instead i need to save it as 19.5
+            #right now its saved as 19:30 for example, instead i need to save it as 19.5
+            #right now its saved as 19:30 for example, instead i need to save it as 19.5
+            
             print(event_start, event_end)
             
             event_duration = event_end - event_start
