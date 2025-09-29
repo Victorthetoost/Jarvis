@@ -1,7 +1,7 @@
 1) make the block thing in the schedule
 2) make it so that you can put weekly schedule thing
 
-
+- make a section where it records you talking and reading stuff so that it can lablel the user's text vs other text.
 
 -add another feature called "clip that", whcih saves the last 2 min of audio with the date and time and it's own transcription
     make a front end feature that makes it so that you can look up if someone said that
